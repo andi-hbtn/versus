@@ -1,4 +1,4 @@
-export default function HeroSection() {
+export default function Header() {
     return (
         <section className="w-full min-h-[85vh] flex items-center justify-center bg-gradient-to-b from-gray-50 to-white">
             <div className="max-w-3xl text-center px-6">

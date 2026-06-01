@@ -29,6 +29,8 @@ export default function Navbar() {
 
                         {/* Dropdown Menu me Radix UI */}
                         <NavigationMenu.Item className="relative">
+
+
                             <NavigationMenu.Content className="absolute top-full left-1/2 -translate-x-1/2 mt-[1vw] w-[28vw] bg-[#1e162c] border border-[#352f48] p-[1.5vw] rounded-[1.39vw] shadow-[0_10px_40px_rgba(0,0,0,0.5)] backdrop-blur-[36px]">
                                 <ul className="flex flex-col gap-[0.8vw] list-none p-0 m-0">
                                     <li className="p-[0.8vw] hover:bg-[#251938] rounded-[0.97vw] transition-colors group/item">
