@@ -38,7 +38,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                     {[
-                        { value: "250+", label: "Projects Delivered" },
+                        { value: "25+", label: "Projects Delivered" },
                         { value: "99%", label: "Client Satisfaction" },
                         { value: "15+", label: "Team Experts" },
                     ].map((item, i) => (

@@ -1,7 +1,6 @@
 export default function Header() {
     return (
         <section className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#0f0c16] text-white">
-
             {/* Ambient background glow */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ac24ff1a,transparent_55%)]" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,#1b4dfe12,transparent_60%)]" />

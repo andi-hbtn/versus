@@ -14,21 +14,12 @@ export default function Navbar() {
                 {/* ───── LOGO ───── */}
                 <Link href="/" className="flex items-center gap-3 group">
                     <Image
-                        src="/images/logo.png"
+                        src="/images/logo3.png"
                         alt="Versus Logo"
                         width={150}
                         height={50}
                         priority
                     />
-
-                    <div className="flex flex-col leading-none">
-                        <span className="text-white font-medium tracking-tight">
-                            Platforma
-                        </span>
-                        <span className="text-white/40 text-[11px]">
-                            Product Studio
-                        </span>
-                    </div>
 
                 </Link>
 
