@@ -2,81 +2,114 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-[#13101c] border-t border-[#352f48] relative overflow-hidden pt-[6vw] pb-[3vw]">
+        <footer className="relative w-full bg-[#0f0c16] text-white overflow-hidden">
 
-            {/* BACKGROUND LINEAR BLUR EFFECT (.linear_blur) */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[30vw] pointer-events-none filter blur-[120px] bg-gradient-to-b from-[#ac24ff1a] via-[#1c4eff15] to-transparent" />
+            {/* Ambient glow background */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ac24ff1a,transparent_60%)] pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,#1b4dfe12,transparent_55%)] pointer-events-none" />
 
-            <div className="max-w-[83vw] mx-auto flex flex-col gap-[4vw] relative z-10">
+            <div className="relative max-w-[1200px] mx-auto px-6 py-24 flex flex-col gap-20">
 
-                {/* TOP SECTION: KARTAT APO STATISTIKAT (.div-block-490) */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-[2vw] bg-[#ddccff0d] border border-[#352f48]/30 rounded-[2.08vw] px-[4.03vw] py-[2.5vw] items-center justify-between">
+                {/* ───── HERO / BRAND MESSAGE ───── */}
+                <div className="flex flex-col items-center text-center gap-6">
+                    <h2 className="text-4xl md:text-5xl font-light tracking-tight leading-tight">
+                        Build products that
+                        <span className="block bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b] text-transparent bg-clip-text font-medium">
+                            actually feel alive
+                        </span>
+                    </h2>
 
-                    <div className="flex flex-col text-left">
-                        <span className="text-[1.39vw] font-medium text-white tracking-tight">250+</span>
-                        <span className="text-[0.97vw] text-[#a997ce]">Projekte të Përfunduara</span>
-                    </div>
+                    <p className="text-white/50 max-w-[520px] text-sm leading-relaxed">
+                        We design, build and scale digital products with a focus on clarity,
+                        performance and user experience — from idea to launch.
+                    </p>
 
-                    <div className="hidden md:block w-[1px] h-[3vw] bg-gradient-to-b from-transparent via-[#ac24ff] to-transparent" />
-
-                    <div className="flex flex-col text-left">
-                        <span className="text-[1.39vw] font-medium text-white tracking-tight">99%</span>
-                        <span className="text-[0.97vw] text-[#a997ce]">Klientë të Kënaqur</span>
-                    </div>
-
-                    <div className="hidden md:block w-[1px] h-[3vw] bg-gradient-to-b from-transparent via-[#fe881b] to-transparent" />
-
-                    <div className="flex flex-col text-left">
-                        <span className="text-[1.39vw] font-medium text-white tracking-tight">15+</span>
-                        <span className="text-[0.97vw] text-[#a997ce]">Ekspertë në Ekip</span>
+                    <div className="flex gap-3 mt-2">
+                        <button className="px-5 py-2 rounded-full bg-white text-black text-sm font-medium">
+                            Start a project
+                        </button>
+                        <button className="px-5 py-2 rounded-full border border-white/20 text-sm text-white/70 hover:text-white transition">
+                            View work
+                        </button>
                     </div>
                 </div>
 
-                {/* MIDDLE SECTION: LINQET E NAVIGIMIT */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-[3vw] mt-[2vw]">
+                {/* ───── STATS CARDS ───── */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                    {/* Kolona 1 */}
-                    <div className="flex flex-col gap-[1vw]">
-                        <span className="text-[0.69vw] text-[#a997ce] uppercase tracking-wider font-semibold">Eksploro</span>
-                        <Link href="/sherbimet" className="text-[1.11vw] text-[#bdaee7] hover:text-white transition-colors">Shërbimet</Link>
-                        <Link href="/solutions" className="text-[1.11vw] text-[#bdaee7] hover:text-white transition-colors">Zgjidhjet</Link>
-                        <Link href="/cmimet" className="text-[1.11vw] text-[#bdaee7] hover:text-white transition-colors">Çmimet</Link>
+                    {[
+                        { value: "250+", label: "Projects Delivered" },
+                        { value: "99%", label: "Client Satisfaction" },
+                        { value: "15+", label: "Team Experts" },
+                    ].map((item, i) => (
+                        <div
+                            key={i}
+                            className="relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl
+                            hover:bg-white/10 transition"
+                        >
+                            <div className="text-3xl font-light">{item.value}</div>
+                            <div className="text-white/50 text-sm mt-1">{item.label}</div>
+                        </div>
+                    ))}
+
+                </div>
+
+                {/* ───── NAVIGATION ───── */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+
+                    <div>
+                        <span className="text-xs text-white/40 uppercase tracking-widest">Explore</span>
+                        <div className="mt-4 flex flex-col gap-2 text-sm text-white/70">
+                            <Link href="/services" className="hover:text-white transition">Services</Link>
+                            <Link href="/solutions" className="hover:text-white transition">Solutions</Link>
+                            <Link href="/pricing" className="hover:text-white transition">Pricing</Link>
+                        </div>
                     </div>
 
-                    {/* Kolona 2 */}
-                    <div className="flex flex-col gap-[1vw]">
-                        <span className="text-[0.69vw] text-[#a997ce] uppercase tracking-wider font-semibold">Kompania</span>
-                        <Link href="/rreth-nesh" className="text-[1.11vw] text-[#bdaee7] hover:text-white transition-colors">Rreth Nesh</Link>
-                        <Link href="/karriera" className="text-[1.11vw] text-[#bdaee7] hover:text-white transition-colors">Karriera</Link>
-                        <Link href="/blog" className="text-[1.11vw] text-[#bdaee7] hover:text-white transition-colors">Blog</Link>
+                    <div>
+                        <span className="text-xs text-white/40 uppercase tracking-widest">Company</span>
+                        <div className="mt-4 flex flex-col gap-2 text-sm text-white/70">
+                            <Link href="/about" className="hover:text-white transition">About</Link>
+                            <Link href="/careers" className="hover:text-white transition">Careers</Link>
+                            <Link href="/blog" className="hover:text-white transition">Blog</Link>
+                        </div>
                     </div>
 
-                    {/* Kolona 3 */}
-                    <div className="flex flex-col gap-[1vw]">
-                        <span className="text-[0.69vw] text-[#a997ce] uppercase tracking-wider font-semibold">Suporti</span>
-                        <Link href="/kontakt" className="text-[1.11vw] text-[#bdaee7] hover:text-white transition-colors">Na Kontaktoni</Link>
-                        <Link href="/faq" className="text-[1.11vw] text-[#bdaee7] hover:text-white transition-colors">Pyetje të Shpeshta</Link>
+                    <div>
+                        <span className="text-xs text-white/40 uppercase tracking-widest">Support</span>
+                        <div className="mt-4 flex flex-col gap-2 text-sm text-white/70">
+                            <Link href="/contact" className="hover:text-white transition">Contact</Link>
+                            <Link href="/faq" className="hover:text-white transition">FAQ</Link>
+                        </div>
                     </div>
 
-                    {/* Kolona 4: Custom Gradient Text Section */}
-                    <div className="flex flex-col gap-[1vw]">
-                        <span className="text-[0.69vw] text-[#a997ce] uppercase tracking-wider font-semibold">Misioni</span>
-                        <p className="text-[1.11vw] leading-[140%] text-transparent bg-clip-text bg-gradient-to-r from-[#2ba7ff] via-[#ca45ff] to-[#fe881b] font-medium">
-                            Ndërtojmë të ardhmen e eksperiencave digjitale.
-                        </p>
+                    <div className="flex flex-col justify-between">
+                        <div>
+                            <span className="text-xs text-white/40 uppercase tracking-widest">Vision</span>
+                            <p className="mt-4 text-sm text-transparent bg-clip-text bg-gradient-to-r from-[#2ba7ff] via-[#ca45ff] to-[#fe881b]">
+                                Crafting the next generation of digital experiences.
+                            </p>
+                        </div>
+
+                        <button className="mt-6 px-4 py-2 rounded-full border border-white/15 text-sm text-white/70 hover:text-white hover:border-white/30 transition">
+                            Let’s talk
+                        </button>
                     </div>
 
                 </div>
 
-                {/* BOTTOM SECTION: COPYRIGHT (.footer-bottom) */}
-                <div className="border-t border-[#352f48]/40 pt-[2vw] mt-[2vw] flex flex-col sm:flex-row items-center justify-between gap-[1vw]">
-                    <span className="text-[0.97vw] text-[#a997ce] opacity-50">
-                        © {new Date().getFullYear()} Platforma. Të gjitha të drejtat të rezervuara.
+                {/* ───── BOTTOM BAR ───── */}
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/10 text-sm text-white/40">
+
+                    <span>
+                        © {new Date().getFullYear()} Platforma. All rights reserved.
                     </span>
-                    <div className="flex gap-[2vw]">
-                        <Link href="/privatësia" className="text-[0.97vw] text-[#a997ce] hover:text-white transition-colors">Politika e Privatësisë</Link>
-                        <Link href="/kushtet" className="text-[0.97vw] text-[#a997ce] hover:text-white transition-colors">Kushtet e Përdorimit</Link>
+
+                    <div className="flex gap-6">
+                        <Link href="/privacy" className="hover:text-white transition">Privacy</Link>
+                        <Link href="/terms" className="hover:text-white transition">Terms</Link>
                     </div>
+
                 </div>
 
             </div>

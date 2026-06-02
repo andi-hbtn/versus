@@ -1,13 +1,14 @@
-import Header from "@/components/home/Header";
-import LogoCloud from "@/components/home/LogoCloud";
-import FeaturesSection from "@/components/home/FeaturesSection";
+import Header from "@/components/layout/Header";
+
+import ProductJourney from "@/components/home/ProductJourney";
+import ServicesSection from "@/components/home/ServicesSection";
 
 export default function HomePage() {
   return (
     <>
       <Header />
-      <LogoCloud />
-      <FeaturesSection />
+      <ProductJourney />
+      <ServicesSection />
     </>
   );
 }

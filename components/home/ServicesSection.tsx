@@ -1,7 +1,6 @@
 
 import Image from "next/image";
 
-// Array me të dhënat e sakta nga kodi juaj i Webflow
 const cardsData = [
     {
         id: "design",
@@ -37,7 +36,7 @@ const cardsData = [
     }
 ];
 
-export default function FeaturesSection() {
+export default function ServicesSection() {
     return (
         <section className="w-full bg-[#13101c] py-[8vw] px-[4vw] relative overflow-hidden">
             <div className="max-w-[92vw] mx-auto flex flex-col gap-[4vw] relative z-10">
@@ -68,15 +67,12 @@ export default function FeaturesSection() {
 
                             {/* Efekti i imazhit blur në hover brenda çdo karte (.image-140) */}
                             <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none scale-105">
-                                <img
-                                    src="/images/hover_card_img.png"
-                                    alt="hover blur background"
-                                    className="w-full h-full object-cover mix-blend-color-dodge"
-                                />
+                                <img src="/images/hover_card_img.png" alt="hover blur background" className="w-full h-full object-cover mix-blend-color-dodge" />
                             </div>
 
                             {/* PJESA E SIPËRME: CAPTION & ICON */}
                             <div className="flex flex-col gap-[1.5vw]">
+
                                 <div className="inline-flex items-center gap-[0.5vw] bg-[#1e162c] border border-[#352f48]/60 px-[1vw] py-[0.4vw] rounded-full w-fit">
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="w-[1vw] h-[1vw]">
                                         <path d={card.svgPath} fill="#C86FFF" />
