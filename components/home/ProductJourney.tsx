@@ -61,8 +61,6 @@ export default function ProductJourney() {
         return () => ctx.revert();
     }, []);
 
-    console.log("sectionRef---", sectionRef);
-
     return (
         <section
             ref={sectionRef}

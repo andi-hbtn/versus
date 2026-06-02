@@ -8,19 +8,18 @@ export default function Navbar() {
 
             {/* glass background */}
             <div className="absolute inset-0 bg-[#0f0c16]/70 backdrop-blur-xl border-b border-white/10" />
-
             <div className="relative max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
                 {/* ───── LOGO ───── */}
                 <Link href="/" className="flex items-center gap-3 group">
                     <Image
-                        src="/images/logo3.png"
+                        src="/images/logo.png"
+                        className="w-35 h-auto"
                         alt="Versus Logo"
                         width={150}
-                        height={50}
+                        height={150}
                         priority
                     />
-
                 </Link>
 
                 {/* ───── NAV LINKS ───── */}

@@ -1,3 +1,5 @@
+import RadarHero from "../home/Radar";
+
 export default function Header() {
     return (
         <section className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#0f0c16] text-white">
@@ -52,6 +54,10 @@ export default function Header() {
                 </div>
 
             </div>
+
+            <RadarHero />
+
+            {/* <Radar_two /> */}
         </section>
     );
 }
