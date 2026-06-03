@@ -25,28 +25,21 @@ export default function Navbar() {
                 {/* ───── NAV LINKS ───── */}
                 <NavigationMenu.Root className="hidden md:flex items-center">
                     <NavigationMenu.List className="flex items-center gap-8">
-
                         <NavigationMenu.Item>
-                            <Link href="/sherbimet" className="text-white/60 hover:text-white transition text-sm">
-                                Shërbimet
+                            <Link href="/services" className="text-white/60 hover:text-white transition text-sm">
+                                Services
                             </Link>
                         </NavigationMenu.Item>
-
-                        {/* dropdown */}
-                        <NavigationMenu.Item className="relative">
-
-                            <NavigationMenu.Trigger className="text-white/60 hover:text-white transition text-sm">
-                                Zgjidhjet
-                            </NavigationMenu.Trigger>
-
-                        </NavigationMenu.Item>
-
                         <NavigationMenu.Item>
-                            <Link href="/rreth-nesh" className="text-white/60 hover:text-white transition text-sm">
-                                Rreth Nesh
+                            <Link href="/about" className="text-white/60 hover:text-white transition text-sm">
+                                About Us
                             </Link>
                         </NavigationMenu.Item>
-
+                        <NavigationMenu.Item>
+                            <Link href="/contact" className="text-white/60 hover:text-white transition text-sm">
+                                Contact
+                            </Link>
+                        </NavigationMenu.Item>
                     </NavigationMenu.List>
                 </NavigationMenu.Root>
             </div>

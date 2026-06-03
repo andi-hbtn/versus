@@ -1,6 +1,3 @@
-
-import Image from "next/image";
-
 const cardsData = [
     {
         id: "design",
