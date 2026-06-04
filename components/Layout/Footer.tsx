@@ -23,18 +23,6 @@ export default function Footer() {
                         We design, build and scale digital products with a focus on clarity,
                         performance and user experience — from idea to launch.
                     </p>
-
-                    <div className="flex gap-3 mt-2">
-                        <Link
-                            href="/book-call"
-                            className="px-8 py-4 rounded-full bg-white text-black font-medium hover:scale-105 transition-transform"
-                        >
-                            Initiate Project
-                        </Link>
-                        <button className="px-5 py-2 rounded-full border border-white/20 text-sm text-white/70 hover:text-white transition">
-                            View work
-                        </button>
-                    </div>
                 </div>
 
                 {/* ───── STATS CARDS ───── */}
@@ -93,10 +81,11 @@ export default function Footer() {
                                 Crafting the next generation of digital experiences.
                             </p>
                         </div>
-
-                        <button className="mt-6 px-4 py-2 rounded-full border border-white/15 text-sm text-white/70 hover:text-white hover:border-white/30 transition">
+                        <Link
+                            href="/book-call"
+                            className="mt-6 px-4 py-2 rounded-full border border-white/15 text-sm text-center text-white/70 hover:text-white hover:border-white/30 transition">
                             Let’s talk
-                        </button>
+                        </Link>
                     </div>
 
                 </div>

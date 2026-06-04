@@ -1,4 +1,4 @@
-import Header from "@/components/layout/Header";
+import Header from "@/components/Layout/Header";
 import ContactForm from "@/components/Contact/ContactForm";
 
 export default function ContactPage() {
