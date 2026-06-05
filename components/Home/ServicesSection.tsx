@@ -41,9 +41,9 @@ export default function ServicesSection() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-[2vw]">
                     <div className="max-w-[45vw]">
                         <h3 className="text-white text-[2.5vw] font-semibold tracking-tight leading-[115%]">
-                            Trusted by hyperscale teams<br />
+                            Building solutions that help businesses move forward.<br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
-                                from concept to completion.
+                                Shaped by 9 years of building and solving.
                             </span>
                         </h3>
                     </div>
