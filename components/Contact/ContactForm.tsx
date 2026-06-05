@@ -13,8 +13,6 @@ export default function ContactForm() {
 
     const [state, formAction, isPending] = useActionState(sendEmailAction, initialState);
 
-    console.log("state----", state);
-
     return (
         <div className="relative p-10 rounded-[28px] border border-white/10 bg-white/[0.02] backdrop-blur-xl overflow-hidden">
 

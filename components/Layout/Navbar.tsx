@@ -7,7 +7,7 @@ export default function Navbar() {
         <nav className="fixed top-0 left-0 w-full z-50">
 
             {/* glass background */}
-            <div className="absolute inset-0 bg-[#0f0c16]/70 backdrop-blur-xl border-b border-white/10" />
+            <div className="absolute inset-0 bg-[#0f0c16]/0 backdrop-blur-xl border-b border-white/10" />
             <div className="relative max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
                 {/* ───── LOGO ───── */}
@@ -26,17 +26,17 @@ export default function Navbar() {
                 <NavigationMenu.Root className="hidden md:flex items-center">
                     <NavigationMenu.List className="flex items-center gap-8">
                         <NavigationMenu.Item>
-                            <Link href="/services" className="text-white/60 hover:text-white transition text-sm">
+                            <Link href="/services" className="text-white/100 font-bold hover:text-white transition text-sm">
                                 Services
                             </Link>
                         </NavigationMenu.Item>
                         <NavigationMenu.Item>
-                            <Link href="/about" className="text-white/60 hover:text-white transition text-sm">
+                            <Link href="/about" className="text-white/100 font-bold  hover:text-white transition text-sm">
                                 About Us
                             </Link>
                         </NavigationMenu.Item>
                         <NavigationMenu.Item>
-                            <Link href="/contact" className="text-white/60 hover:text-white transition text-sm">
+                            <Link href="/contact" className="text-white/100 font-bold  hover:text-white transition text-sm">
                                 Contact
                             </Link>
                         </NavigationMenu.Item>

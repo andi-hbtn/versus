@@ -1,5 +1,6 @@
-import Header from "@/components/Layout/Header";
 import ContentSection from "@/components/Shared/ContentSection";
+import Link from "next/link";
+
 export default function ServicesPage() {
 
     const values = [
@@ -37,34 +38,64 @@ export default function ServicesPage() {
 
     return (
         <>
-            <Header />
             <main className="bg-[#05020a] text-white overflow-hidden">
 
-                {/* ================= HEADER ================= */}
-                <section className="max-w-6xl mx-auto px-6 pt-32 pb-20 text-center">
+                {/* ================= HERO ================= */}
+                <section className="relative min-h-screen flex items-center justify-center px-6">
 
-                    <span className="text-white/40 uppercase tracking-[0.35em] text-xs">
-                        Software Studio Services
-                    </span>
+                    {/* ambient glow */}
+                    <div className="absolute w-[650px] h-[650px] bg-white/10 blur-[180px] rounded-full" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(27,77,254,0.12),transparent_60%)]" />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(172,36,255,0.10),transparent_60%)]" />
 
-                    <h1 className="mt-6 text-5xl md:text-7xl font-extralight leading-tight">
-                        Building digital products
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
-                            that scale and perform
+                    <div className="relative max-w-5xl text-center">
+
+                        {/* micro label */}
+                        <span className="text-white/40 uppercase tracking-[0.35em] text-xs">
+                            Versus Services
                         </span>
-                    </h1>
 
-                    <p className="mt-8 text-white/50 max-w-2xl mx-auto text-lg">
-                        With 8+ years of experience in full-stack engineering, we design and build
-                        web platforms, SaaS systems, e-commerce solutions and mobile applications
-                        that are engineered for real-world scale.
-                    </p>
+                        {/* main title */}
+                        <h1 className="mt-6 text-5xl md:text-7xl font-extralight leading-tight">
+                            <span className="block">
+                                We design and engineer
+                            </span>
+
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
+                                digital systems that scale
+                            </span>
+                        </h1>
+
+                        {/* subtitle */}
+                        <p className="mt-8 text-white/50 max-w-2xl mx-auto text-lg">
+                            From web platforms to SaaS products and complex business systems,
+                            we craft software built for performance, clarity and long-term growth.
+                        </p>
+                    </div>
                 </section>
 
-                {/* ================= SERVICES ================= */}
+                {/* SERVICES */}
                 <ContentSection values={values} />
 
-                {/* ================= VALUE PROPOSITION ================= */}
+                {/* 🔥 NEW BRIDGE SECTION */}
+                <section className="max-w-5xl mx-auto px-6 py-24 text-center">
+                    <h3 className="text-2xl md:text-3xl font-light text-white/80">
+                        Built with a carefully engineered technology stack
+                    </h3>
+
+                    <p className="mt-4 text-white/50">
+                        Every service is powered by modern tools across frontend, backend and infrastructure.
+                    </p>
+
+                    <Link
+                        href="/tech-stack"
+                        className="inline-flex mt-8 px-8 py-4 rounded-full bg-gradient-to-r from-[#1b4dfe] via-[#2563eb] to-[#60a5fa] text-white font-medium hover:opacity-90 transition"
+                    >
+                        Explore Tech Stack
+                    </Link>
+                </section>
+
+                {/* VALUE PROPOSITION */}
                 <section className="max-w-5xl mx-auto px-6 py-32 text-center">
 
                     <h2 className="text-4xl md:text-5xl font-extralight leading-tight">
@@ -78,6 +109,7 @@ export default function ServicesPage() {
                         and performance-first thinking.
                     </p>
                 </section>
+
             </main>
         </>
     );

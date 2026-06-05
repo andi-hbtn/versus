@@ -45,13 +45,11 @@ export default function BookCallPage() {
 
                         {/* CTA */}
                         <div className="mt-10">
-                            <a
-                                href="https://calendly.com/andi-bevapi/30min"
+                            <a href="https://calendly.com/andi-bevapi/30min"
                                 target="_blank"
                                 className="px-8 py-4 rounded-full bg-white text-black font-medium hover:scale-105 transition inline-flex items-center gap-2 group"
                             >
                                 Schedule your call
-
                                 <CalendarCheck className="transition-transform" size={18} />
                             </a>
                         </div>

@@ -52,7 +52,6 @@ export default function Footer() {
                         <span className="text-xs text-white/40 uppercase tracking-widest">Explore</span>
                         <div className="mt-4 flex flex-col gap-2 text-sm text-white/70">
                             <Link href="/services" className="hover:text-white transition">Services</Link>
-                            <Link href="/solutions" className="hover:text-white transition">Solutions</Link>
                             <Link href="/pricing" className="hover:text-white transition">Pricing</Link>
                         </div>
                     </div>
@@ -61,8 +60,7 @@ export default function Footer() {
                         <span className="text-xs text-white/40 uppercase tracking-widest">Company</span>
                         <div className="mt-4 flex flex-col gap-2 text-sm text-white/70">
                             <Link href="/about" className="hover:text-white transition">About</Link>
-                            <Link href="/careers" className="hover:text-white transition">Careers</Link>
-                            <Link href="/blog" className="hover:text-white transition">Blog</Link>
+                            <Link href="/tech-stack" className="hover:text-white transition">Tech Stack</Link>
                         </div>
                     </div>
 
