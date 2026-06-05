@@ -40,7 +40,7 @@ export default function ServicesSection() {
                 {/* HEADER I SEKSIONIT (TITULLI & DIZALNI) */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-[2vw]">
                     <div className="max-w-[45vw]">
-                        <h3 className="text-white text-[2.5vw] font-semibold tracking-tight leading-[115%]">
+                        <h3 className="text-white text-[2.3vw] font-semibold tracking-tight leading-[115%]">
                             Building solutions that help businesses move forward.<br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
                                 Shaped by 9 years of building and solving.

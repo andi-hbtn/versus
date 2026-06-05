@@ -52,7 +52,7 @@ export default function Footer() {
                         <span className="text-xs text-white/40 uppercase tracking-widest">Explore</span>
                         <div className="mt-4 flex flex-col gap-2 text-sm text-white/70">
                             <Link href="/services" className="hover:text-white transition">Services</Link>
-                            <Link href="/pricing" className="hover:text-white transition">Pricing</Link>
+                            <Link href="/case-studies" className="hover:text-white transition">Case Studies</Link>
                         </div>
                     </div>
 
@@ -68,7 +68,12 @@ export default function Footer() {
                         <span className="text-xs text-white/40 uppercase tracking-widest">Support</span>
                         <div className="mt-4 flex flex-col gap-2 text-sm text-white/70">
                             <Link href="/contact" className="hover:text-white transition">Contact</Link>
-                            <Link href="/faq" className="hover:text-white transition">FAQ</Link>
+                            <Link href="https://calendly.com/andi-bevapi/30min"
+                                target="_blank"
+                                className="hover:text-white transition"
+                            >
+                                Schedule your call
+                            </Link>
                         </div>
                     </div>
 

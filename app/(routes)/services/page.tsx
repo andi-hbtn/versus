@@ -80,7 +80,9 @@ export default function ServicesPage() {
                 {/* 🔥 NEW BRIDGE SECTION */}
                 <section className="max-w-5xl mx-auto px-6 py-24 text-center">
                     <h3 className="text-2xl md:text-3xl font-light text-white/80">
-                        Built with a carefully engineered technology stack
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
+                            Built with a carefully engineered technology stack
+                        </span>
                     </h3>
 
                     <p className="mt-4 text-white/50">
@@ -93,21 +95,6 @@ export default function ServicesPage() {
                     >
                         Explore Tech Stack
                     </Link>
-                </section>
-
-                {/* VALUE PROPOSITION */}
-                <section className="max-w-5xl mx-auto px-6 py-32 text-center">
-
-                    <h2 className="text-4xl md:text-5xl font-extralight leading-tight">
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
-                            we build systems that grow businesses
-                        </span>
-                    </h2>
-
-                    <p className="mt-8 text-white/50">
-                        Every product is engineered with long-term scalability, clean architecture
-                        and performance-first thinking.
-                    </p>
                 </section>
 
             </main>
