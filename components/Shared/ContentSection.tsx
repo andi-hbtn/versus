@@ -1,6 +1,6 @@
-import { ContentSectionProps } from "@/app/Types/content-section.types"
+import { CardItem } from "@/app/Types/content-section.types"
 
-export default function ContentSection({ values }: { values: ContentSectionProps[] }) {
+export default function ContentSection({ values }: { values: CardItem[] }) {
     return (
         <section className="max-w-6xl mx-auto px-6 py-20">
 
@@ -43,9 +43,23 @@ export default function ContentSection({ values }: { values: ContentSectionProps
                         </h3>
 
                         {/* DESC */}
-                        <p className="relative z-10 text-white/60 mt-4 leading-relaxed">
-                            {s.description}
-                        </p>
+                        {"description" in s && (
+                            <p className="relative z-10 text-white/60 mt-4">
+                                {s.description}
+                            </p>
+                        )}
+
+
+                        {"techs" in s && (
+                            <ul className="relative z-10 mt-4 space-y-2 text-white/60">
+                                {s.techs?.map((t) => (
+                                    <li key={t} className="flex items-center gap-2">
+                                        <span className="w-1.5 h-1.5 bg-[#1b4dfe] rounded-full" />
+                                        {t}
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
 
                         {/* gradient layer (always visible) */}
                         <div className="
