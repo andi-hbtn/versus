@@ -53,27 +53,21 @@ export default function CaseStudiesPage() {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(27,77,254,0.14),transparent_60%)]" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(172,36,255,0.12),transparent_65%)]" />
                     <div className="absolute w-[700px] h-[700px] bg-white/10 blur-[200px] rounded-full opacity-60" />
-
                     <div className="relative max-w-5xl text-center">
-
                         <span className="text-white/40 uppercase tracking-[0.35em] text-xs">
                             Case Studies Archive
                         </span>
-
                         <h1 className="mt-6 text-5xl md:text-7xl font-extralight leading-tight">
                             <span className="block">
                                 Systems designed under
                             </span>
-
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
                                 production constraints
                             </span>
                         </h1>
-
                         <p className="mt-8 text-white/50 max-w-2xl mx-auto text-lg">
                             A collection of engineering outcomes built under real-world load, scale, and business pressure — not prototypes.
                         </p>
-
                         {/* micro trust strip */}
                         <div className="mt-10 flex justify-center gap-6 text-xs text-white/40">
                             <span>Scalable Systems</span>
@@ -87,12 +81,9 @@ export default function CaseStudiesPage() {
 
                 {/* ================= CASE STUDIES ================= */}
                 <ContentSection values={cases} />
-
                 {/* ================= IMPACT SECTION ================= */}
                 <section className="max-w-6xl mx-auto px-6 py-32">
-
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
                         {[
                             { value: "10x", label: "Performance Improvements" },
                             { value: "99.9%", label: "System Uptime Targets" },
@@ -103,7 +94,6 @@ export default function CaseStudiesPage() {
                                 className="relative p-8 rounded-[24px] border border-white/10 bg-white/[0.02] backdrop-blur-xl overflow-hidden"
                             >
                                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(27,77,254,0.10),transparent_60%)]" />
-
                                 <div className="relative">
                                     <div className="text-3xl font-light text-white">
                                         {item.value}
@@ -114,24 +104,19 @@ export default function CaseStudiesPage() {
                                 </div>
                             </div>
                         ))}
-
                     </div>
                 </section>
-
                 {/* ================= CTA ================= */}
                 <section className="max-w-5xl mx-auto px-6 pb-32 text-center">
-
                     <h3 className="text-3xl md:text-4xl font-extralight">
                         Ready to build something
                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
                             that actually scales?
                         </span>
                     </h3>
-
                     <p className="mt-6 text-white/50">
                         We design systems where architecture, performance and UX are treated as one.
                     </p>
-
                     <Link
                         href="/contact"
                         className="inline-flex mt-10 px-10 py-4 rounded-full bg-gradient-to-r from-[#1b4dfe] via-[#2563eb] to-[#60a5fa] text-white font-medium hover:opacity-90 transition"
@@ -139,7 +124,6 @@ export default function CaseStudiesPage() {
                         Start a project
                     </Link>
                 </section>
-
             </main>
         </>
     );
