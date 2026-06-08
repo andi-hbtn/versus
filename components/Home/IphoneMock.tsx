@@ -21,13 +21,9 @@ export default function IphoneMock({ step = 0 }: { step?: number }) {
 
                     {/* SCREEN FRAME */}
                     <div className="relative h-full w-full overflow-hidden rounded-[46px] bg-black">
-
-
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#1a1a2e_0%,_#16213e_40%,_#0f3460_100%)]" />
-
                         {/* Subtle light leak top */}
                         <div className="absolute inset-x-0 top-0 h-[35%] bg-gradient-to-b from-white/[0.04] to-transparent pointer-events-none" />
-
                         {/* SCREEN CONTENT */}
                         <div className="relative h-full w-full flex flex-col">
 
@@ -57,7 +53,7 @@ export default function IphoneMock({ step = 0 }: { step?: number }) {
                                 </div>
 
                                 {/* Icons */}
-                                <div className="flex items-center gap-[5px] text-white">
+                                <div className="flex items-center gap-[7px] text-white">
                                     <Signal size={15} strokeWidth={2.5} />
                                     <Wifi size={15} strokeWidth={2.5} />
                                     <BatteryFull size={22} strokeWidth={2} />

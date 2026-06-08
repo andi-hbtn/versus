@@ -1,3 +1,5 @@
+import ServiceFlowCards from "./ServiceFlowSteps";
+
 const cardsData = [
     {
         id: "design",
@@ -56,55 +58,8 @@ export default function ServicesSection() {
 
                 {/* GRIDI I KATËR KARTAVE (.crads-container) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1.5vw] mt-[2vw]">
-                    {cardsData.map((card) => (
-                        <div
-                            key={card.id}
-                            className="group relative bg-[#ddccff06] border border-[#352f48]/40 rounded-[2.08vw] p-[2vw] min-h-[28vw] flex flex-col justify-between overflow-hidden transition-all duration-500 hover:border-[#ac24ff]/50 hover:bg-[#1e162c]/60 shadow-xl backdrop-blur-sm"
-                        >
-
-                            {/* Efekti i imazhit blur në hover brenda çdo karte (.image-140) */}
-                            <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none scale-105">
-                                <img src="/images/hover_card_img.png" alt="hover blur background" className="w-full h-full object-cover mix-blend-color-dodge" />
-                            </div>
-
-                            {/* PJESA E SIPËRME: CAPTION & ICON */}
-                            <div className="flex flex-col gap-[1.5vw]">
-
-                                <div className="inline-flex items-center gap-[0.5vw] bg-[#1e162c] border border-[#352f48]/60 px-[1vw] py-[0.4vw] rounded-full w-fit">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="w-[1vw] h-[1vw]">
-                                        <path d={card.svgPath} fill="#C86FFF" />
-                                        {card.extraSvg}
-                                    </svg>
-                                    <span className="text-[0.85vw] font-medium text-white tracking-wide">{card.caption}</span>
-                                </div>
-
-                                {/* TITULLI I KARTËS */}
-                                <h4 className="text-white text-[1.5vw] font-medium leading-[130%] tracking-tight">
-                                    {card.title}
-                                </h4>
-
-                                {/* LISTA E TIPAREVE (.list) */}
-                                <ul className="flex flex-col gap-[0.6vw] list-none p-0 mt-[0.5vw]">
-                                    {card.features.map((feat, index) => (
-                                        <li key={index} className="flex items-center gap-[0.5vw] text-[#a997ce] text-[0.97vw]">
-                                            <span className="w-[0.4vw] h-[0.4vw] bg-[#ac24ff] rounded-full block shrink-0" />
-                                            <span>{feat}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-
-                            {/* PJESA E POSHTME: BUTONI INTERAKTIV (Me CSS Hover) */}
-                            <div className="mt-[2vw] pt-[1vw]">
-                                <a
-                                    href="#"
-                                    className="inline-flex items-center justify-center w-full py-[0.8vw] bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b] bg-[length:300%_100%] bg-left hover:bg-right rounded-[1vw] text-white text-[0.9vw] font-medium transition-all duration-500 shadow-md group-hover:scale-[1.02]"
-                                >
-                                    <span className="tracking-wide">Show me more</span>
-                                </a>
-                            </div>
-
-                        </div>
+                    {cardsData.map((card, index) => (
+                        <ServiceFlowCards key={index} card={card} />
                     ))}
                 </div>
 

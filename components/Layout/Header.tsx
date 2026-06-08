@@ -273,7 +273,9 @@ export default function Header() {
                     </Link>
 
                     <button className="px-8 py-4 rounded-full border border-white/20 text-white/80">
-                        Case Studies
+                        <Link href="/case-studies">
+                            Case Studies
+                        </Link>
                     </button>
                 </div>
 

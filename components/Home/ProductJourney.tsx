@@ -62,15 +62,10 @@ export default function ProductJourney() {
     }, []);
 
     return (
-        <section
-            ref={sectionRef}
-            className="w-full bg-[#0f0c16] text-white relative min-h-[400vh] px-[5vw]"
-        >
+        <section ref={sectionRef} className="w-full bg-[#0f0c16] text-white relative min-h-[400vh] px-[5vw]">
             <div className="sticky top-[60px] h-screen flex items-center max-w-[1400px] mx-auto gap-[6vw]">
-
                 {/* LEFT */}
                 <div className="w-1/2 flex flex-col gap-[3vw]">
-
                     <div>
                         <h2 className="text-[3vw] font-semibold leading-tight">
                             From idea <br />
@@ -87,13 +82,7 @@ export default function ProductJourney() {
                     {/* STEPS */}
                     <div className="flex flex-col gap-[2vw]">
                         {steps.map((step, index) => (
-                            <div
-                                key={step.id}
-                                className={`pl-6 border-l transition-all duration-500 ${index === activeStep
-                                    ? "border-[#ac24ff] opacity-100 scale-100"
-                                    : "border-[#2a2238] opacity-40 scale-[0.98]"
-                                    }`}
-                            >
+                            <div key={step.id} className={`pl-6 border-l transition-all duration-500 ${index === activeStep ? "border-[#ac24ff] opacity-100 scale-100" : "border-[#2a2238] opacity-40 scale-[0.98]"}`}>
                                 <h3 className="text-xl font-medium">
                                     {step.title}
                                 </h3>
