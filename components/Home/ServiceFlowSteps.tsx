@@ -4,11 +4,7 @@ import { useState } from "react";
 import { ServiceFlow } from "@/app/Types/service-flow.type";
 import ServiceModal from "./ServiceModal";
 
-type Props = {
-    card: ServiceFlow;
-};
-
-export default function ServiceFlowCards({ card }: Props) {
+export default function ServiceFlowCards({ card }: { card: ServiceFlow }) {
     const [open, setOpen] = useState(false);
 
     return (
