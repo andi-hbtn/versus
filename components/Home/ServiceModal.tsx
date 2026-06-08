@@ -63,9 +63,10 @@ export default function ServiceModal({ open, onClose, card }: Props) {
                     </div>
 
                     <div className="text-white/60 text-sm leading-relaxed">
-                        Deep explanation area can go here (optional).
+                        Deep explanation area can go here (optional).  
                         You can extend this per service.
                     </div>
+
                 </div>
             </div>
         </div>

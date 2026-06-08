@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export interface ServiceFlow {
-    id: string,
+    id: number,
     caption: string
     title: string,
     features: string[],

@@ -2,7 +2,7 @@ import ServiceFlowCards from "./ServiceFlowSteps";
 
 const cardsData = [
     {
-        id: "design",
+        id:1,
         caption: "Design",
         title: "Realize new ideas and opportunities without the hassle.",
         features: ["Dedicated specialists", "Decision-ready solutions"],
@@ -10,7 +10,7 @@ const cardsData = [
         extraSvg: null
     },
     {
-        id: "onboarding",
+        id: 2,
         caption: "Onboarding",
         title: "Qualify equipment with far fewer interactions.",
         features: ["Cross-company alignment", "Follow-through ownership"],
@@ -18,7 +18,7 @@ const cardsData = [
         extraSvg: <circle cx="2" cy="2" r="2" transform="matrix(-1 0 0 1 10 6)" fill="#C86FFF" />
     },
     {
-        id: "delivery",
+        id: 3,
         caption: "Delivery",
         title: "Receive the right materials on site without drama.",
         features: ["Product fit/spec validations", "Change ownership"],
@@ -26,7 +26,7 @@ const cardsData = [
         extraSvg: <circle cx="3" cy="3" r="3" transform="matrix(-1 0 0 1 11 5)" fill="#C86FFF" />
     },
     {
-        id: "deployment",
+        id: 4,
         caption: "Deployment",
         title: "Commission with curated context, not backtracking.",
         features: ["Undisrupted workflows", "Clean handoffs"],
@@ -58,8 +58,8 @@ export default function ServicesSection() {
 
                 {/* GRIDI I KATËR KARTAVE (.crads-container) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1.5vw] mt-[2vw]">
-                    {cardsData.map((card, index) => (
-                        <ServiceFlowCards key={index} card={card} />
+                    {cardsData.map((card) => (
+                        <ServiceFlowCards key={card.id}  card={card} />
                     ))}
                 </div>
 
