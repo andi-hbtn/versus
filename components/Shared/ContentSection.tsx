@@ -2,7 +2,7 @@ import { CardItem } from "@/app/Types/content-section.types"
 
 export default function ContentSection({ values }: { values: CardItem[] }) {
     return (
-        <section className="max-w-8xl mx-auto px-6 py-20">
+        <section className="font-maven max-w-8xl mx-auto px-6 py-20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {values.map((s) => (
                     <div key={s.id} className="relative p-10 rounded-[28px] border border-white/10  bg-white/[0.02] backdrop-blur-xl overflow-hidden transition-all duration-500 border-[#ac24ff]/20 bg-[#1b4dfe]/5">

@@ -79,6 +79,7 @@ export default function ServicesPage() {
 
                 {/* CONTENT */}
                 <div className="
+                font-maven
                     relative
                     max-w-5xl
                     text-center
@@ -148,6 +149,7 @@ export default function ServicesPage() {
 
             {/* ================= BRIDGE SECTION ================= */}
             <section className="
+                font-maven
                 max-w-5xl
                 mx-auto
                 px-6

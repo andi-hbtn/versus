@@ -18,7 +18,7 @@ const cardsData = [
         svgPath:
             "M0.970459 8C0.970459 11.866 4.10447 15 7.97046 15C11.8365 15 14.9705 11.866 14.9705 8C14.9705 4.13401 11.8365 1 7.97046 1C4.10447 1 0.970459 4.13401 0.970459 8ZM13.5705 8C13.5705 11.0928 11.0633 13.6 7.97046 13.6C4.87766 13.6 2.37046 11.0928 2.37046 8C2.37046 4.90721 4.87766 2.4 7.97046 2.4C11.0633 2.4 13.5705 4.90721 13.5705 8Z",
         extraSvg: (
-            <circle cx="2" cy="2" r="2" transform="matrix(-1 0 0 1 10 6)" fill="#C86FFF" />
+            <circle key={1} cx="2" cy="2" r="2" transform="matrix(-1 0 0 1 10 6)" fill="#C86FFF" />
         ),
     },
     {
@@ -29,7 +29,7 @@ const cardsData = [
         svgPath:
             "M0.970459 8C0.970459 11.866 4.10447 15 7.97046 15C11.8365 15 14.9705 11.866 14.9705 8C14.9705 4.13401 11.8365 1 7.97046 1C4.10447 1 0.970459 4.13401 0.970459 8ZM13.5705 8C13.5705 11.0928 11.0633 13.6 7.97046 13.6C4.87766 13.6 2.37046 11.0928 2.37046 8C2.37046 4.90721 4.87766 2.4 7.97046 2.4C11.0633 2.4 13.5705 4.90721 13.5705 8Z",
         extraSvg: (
-            <circle cx="3" cy="3" r="3" transform="matrix(-1 0 0 1 11 5)" fill="#C86FFF" />
+            <circle key={2} cx="3" cy="3" r="3" transform="matrix(-1 0 0 1 11 5)" fill="#C86FFF" />
         ),
     },
     {
@@ -40,7 +40,7 @@ const cardsData = [
         svgPath:
             "M0.970459 8C0.970459 11.866 4.10447 15 7.97046 15C11.8365 15 14.9705 11.866 14.9705 8C14.9705 4.13401 11.8365 1 7.97046 1C4.10447 1 0.970459 4.13401 0.970459 8ZM13.5705 8C13.5705 11.0928 11.0633 13.6 7.97046 13.6C4.87766 13.6 2.37046 11.0928 2.37046 8C2.37046 4.90721 4.87766 2.4 7.97046 2.4C11.0633 2.4 13.5705 4.90721 13.5705 8Z",
         extraSvg: (
-            <circle cx="4" cy="4" r="4" transform="matrix(-1 0 0 1 12 4)" fill="#C86FFF" />
+            <circle key={3} cx="4" cy="4" r="4" transform="matrix(-1 0 0 1 12 4)" fill="#C86FFF" />
         ),
     },
 ];
@@ -55,7 +55,7 @@ export default function ServicesSection() {
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
 
                     <div className="lg:max-w-2xl">
-                        <h3 className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug">
+                        <h3 className="font-maven text-white text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug">
                             Building solutions that help businesses move forward.<br />
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
                                 Shaped by 9 years of building and solving.
@@ -78,7 +78,6 @@ export default function ServicesSection() {
                         <ServiceFlowCards key={card.id} card={card} />
                     ))}
                 </div>
-
             </div>
         </section>
     );

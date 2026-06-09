@@ -43,8 +43,6 @@ export default function ProductJourney() {
                 trigger: sectionRef.current,
                 start: "top top",
                 end: "+=2000",
-                scrub: true,
-                pin: true, // bën pin të gjithë seksionin gjatë scroll-it
                 onUpdate: (self) => {
                     const index = Math.min(
                         steps.length - 1,
@@ -59,15 +57,15 @@ export default function ProductJourney() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="w-full bg-[#0f0c16] text-white relative min-h-screen md:min-h-[250vh] px-4 sm:px-[5vw] py-16 md:py-0">
-            <div className="md:sticky md:top-0 h-auto md:h-screen flex flex-col md:flex-row items-center max-w-[1400px] mx-auto gap-10 md:gap-[6vw]">
+        <section ref={sectionRef} className="w-full bg-[#0f0c16] text-white relative min-h-screen md:min-h-[300vh] px-4 sm:px-[5vw] py-16 md:py-0">
+            <div className="sticky top-[60px] h-auto md:h-screen flex flex-col md:flex-row items-center max-w-[1400px] mx-auto gap-10 md:gap-[6vw]">
 
                 {/* LEFT SIDE: Titulli dhe Hapat */}
                 <div className="w-full md:w-1/2 flex flex-col gap-8 md:gap-[3vw]">
                     <div>
-                        <h2 className="text-3xl sm:text-4xl lg:text-[3vw] font-semibold leading-tight">
+                        <h2 className="font-maven text-3xl sm:text-4xl lg:text-[3vw] font-semibold leading-tight">
                             From idea <br />
-                            <span className="bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b] text-transparent bg-clip-text">
+                            <span className="font-maven bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b] text-transparent bg-clip-text">
                                 to launch
                             </span>
                         </h2>

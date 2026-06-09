@@ -128,3 +128,9 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .font-maven {
+    font-family: var(--font-maven-pro);
+  }
+}
