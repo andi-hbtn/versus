@@ -9,23 +9,11 @@ export default function BookCallPage() {
             <section className="font-maven relative min-h-[85vh] md:min-h-screen flex items-center justify-center px-6 py-20 md:py-0 text-center">
 
                 {/* GLOW (responsive) */}
-                <div className="
-                    absolute
-                    w-[280px] h-[280px]
-                    sm:w-[420px] sm:h-[420px]
-                    md:w-[650px] md:h-[650px]
-                    bg-white/10
-                    blur-[80px] md:blur-[180px]
-                    rounded-full
-                " />
-                <div className=" absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(27,77,254,0.12),transparent_60%)]" />
-
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(172,36,255,0.10),transparent_60%)]
-                " />
-
+                <div className="absolute w-[280px] h-[280px] sm:w-[420px] sm:h-[420px] md:w-[650px] md:h-[650px] bg-white/10 blur-[80px] md:blur-[180px] rounded-full" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(27,77,254,0.12),transparent_60%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(172,36,255,0.10),transparent_60%)]" />
                 {/* CONTENT */}
                 <div className="relative max-w-4xl px-4 sm:px-6">
-
                     {/* LABEL */}
                     <span className="text-white/40 uppercase tracking-[0.25em] md:tracking-[0.35em]text-[10px] sm:text-xs">
                         Free Discovery Call
@@ -34,7 +22,6 @@ export default function BookCallPage() {
                     {/* TITLE */}
                     <h1 className="mt-5 md:mt-6 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight leading-[1.1]">
                         <span className="block">Let’s talk about your</span>
-
                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">next product</span>
                     </h1>
 
