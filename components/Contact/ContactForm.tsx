@@ -3,7 +3,6 @@
 import { useActionState } from "react";
 import { sendEmailAction } from "./actions";
 import { FormState } from "@/app/Types/send-email";
-
 export default function ContactForm() {
 
     const initialState: FormState = {
@@ -12,8 +11,9 @@ export default function ContactForm() {
         errors: {},
     };
 
-    const [state, formAction, isPending] = useActionState(sendEmailAction, initialState);
+    const formFields = ["name", "email", "company"] as const;
 
+    const [state, formAction, isPending] = useActionState(sendEmailAction, initialState);
     return (
         <div className="
             relative
@@ -56,7 +56,7 @@ export default function ContactForm() {
                 <form action={formAction} className="flex flex-col gap-4">
 
                     {/* INPUTS */}
-                    {["name", "email", "company"].map((field) => (
+                    {formFields.map((field) => (
                         <div key={field}>
                             <input
                                 name={field}
