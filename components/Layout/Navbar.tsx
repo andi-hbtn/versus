@@ -21,7 +21,7 @@ export default function Navbar() {
                 {/* LOGO */}
                 <Link href="/" className="flex items-center gap-3">
                     <Image
-                        src="/images/logo.png"
+                        src="/images/versus_one.png"
                         className="w-32 h-auto"
                         alt="Versus Logo"
                         width={150}
