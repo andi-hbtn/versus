@@ -12,8 +12,7 @@ export default function ContactForm() {
         errors: {},
     };
 
-    const [state, formAction, isPending] =
-        useActionState(sendEmailAction, initialState);
+    const [state, formAction, isPending] = useActionState(sendEmailAction, initialState);
 
     return (
         <div className="

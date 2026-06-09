@@ -44,15 +44,16 @@ export async function sendEmailAction(prevState: any, formData: FormData) {
         });
 
         return {
+            success: true,
             message: "Thank you for reaching out. We'll get back to you shortly.",
-            status: true,
+            errors: {},
         };
-
     } catch (error) {
         console.log("error----", error)
         return {
+            success: false,
             message: error instanceof Error ? error.message : "Unexpected error",
-            status: false
+            errors: {},
         }
     }
 
