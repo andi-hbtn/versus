@@ -7,6 +7,7 @@ export default function BookCallPage() {
 
             {/* ================= HERO ================= */}
             <section className="
+                font-maven
                 relative
                 min-h-[85vh] md:min-h-screen
                 flex items-center justify-center

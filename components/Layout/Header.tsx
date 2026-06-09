@@ -279,13 +279,11 @@ export default function Header() {
     }, []);
 
     return (
-        <section
-            ref={containerRef}
+        <section ref={containerRef}
             className="relative w-full min-h-[95vh] overflow-hidden bg-[#05020a] text-white flex items-center justify-center"
         >
             {/* CANVAS */}
-            <canvas
-                ref={canvasRef}
+            <canvas ref={canvasRef}
                 className="absolute inset-0 w-full h-full z-10 pointer-events-none mix-blend-screen"
             />
 
@@ -295,32 +293,26 @@ export default function Header() {
             {/* CONTENT */}
             <div className="relative z-20 max-w-5xl w-full text-center px-4 sm:px-6 flex flex-col items-center">
 
-                <div
-                    ref={badgeRef}
-                    className="mb-6 sm:mb-8 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-white/10 bg-white/[0.02] text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.35em] uppercase text-white/60 opacity-0"
+                <div ref={badgeRef}
+                    className="font-maven mb-6 sm:mb-8 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-white/10 bg-white/[0.02] text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.35em] uppercase text-white/60 opacity-0"
                 >
                     System Architecture • Neural Engineering
                 </div>
 
-                <h1
-                    ref={titleRef}
-                    className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight leading-tight"
-                >
+                <h1 ref={titleRef} className="font-maven text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight leading-tight">
                     <span className="block opacity-0">Build modern products</span>
                     <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#3b6eff] via-[#bc4eff] to-[#ff9e4f] opacity-0">
                         that actually scale
                     </span>
                 </h1>
 
-                <p
-                    ref={textRef}
+                <p ref={textRef}
                     className="mt-5 sm:mt-8 text-sm sm:text-base lg:text-lg text-white/50 max-w-[90%] sm:max-w-[560px] md:max-w-[640px] opacity-0 leading-relaxed"
                 >
                     We design and engineer high-performance SaaS platforms with precision systems thinking.
                 </p>
 
-                <div
-                    ref={buttonsRef}
+                <div ref={buttonsRef}
                     className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto"
                 >
                     <Link

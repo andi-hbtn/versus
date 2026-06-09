@@ -10,7 +10,7 @@ Designed to deliver high-performance websites, scalable applications, and seamle
 
 This project is built using:
 
-- Next.js 15
+- Next.js 16
 - React 19
 - TypeScript
 - Tailwind CSS

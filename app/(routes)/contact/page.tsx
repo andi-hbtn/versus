@@ -10,6 +10,7 @@ export default function ContactPage() {
 
                 {/* ================= HERO ================= */}
                 <section className="
+                    font-maven
                     relative
                     max-w-6xl
                     mx-auto

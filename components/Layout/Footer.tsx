@@ -12,7 +12,7 @@ export default function Footer() {
 
                 {/* ───── HERO / BRAND MESSAGE ───── */}
                 <div className="flex flex-col items-center text-center gap-6">
-                    <h2 className="text-4xl md:text-5xl font-light tracking-tight leading-tight">
+                    <h2 className="font-maven text-4xl md:text-5xl font-light tracking-tight leading-tight">
                         Build products that
                         <span className="block bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b] text-transparent bg-clip-text font-medium">
                             actually feel alive
@@ -96,11 +96,11 @@ export default function Footer() {
                 {/* ───── BOTTOM BAR ───── */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/10 text-sm text-white/40">
 
-                    <span>
+                    <span className="font-maven">
                         © {new Date().getFullYear()} Platforma. All rights reserved.
                     </span>
 
-                    <div className="flex gap-6">
+                    <div className="font-maven flex gap-6">
                         <Link href="/privacy" className="hover:text-white transition">Privacy</Link>
                         <Link href="/terms" className="hover:text-white transition">Terms</Link>
                     </div>

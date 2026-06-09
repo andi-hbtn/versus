@@ -58,6 +58,7 @@ export default function AboutPage() {
 
             {/* ================= HERO ================= */}
             <section className="
+                font-maven
                 relative
                 min-h-screen
                 flex items-center justify-center
