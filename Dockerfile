@@ -1,32 +1,27 @@
-# Stage 1: Deps
-FROM node:20-alpine AS deps
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci
+# Përdor imazhin zyrtar Node.js (versioni i lehtë Alpine)
+FROM node:20-alpine
 
-# Stage 2: Builder
-FROM node:20-alpine AS builder
+# Set working directory
 WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
+
+# Kopjo skedarët e paketave
+COPY package*.json ./
+
+# Instalo të gjitha libraritë
+RUN npm install
+
+# Kopjo pjesën tjetër të kodit
 COPY . .
+
+# Build aplikacionin Next.js
 RUN npm run build
 
-# Stage 3: Runner
-FROM node:20-alpine AS runner
-WORKDIR /app
-ENV NODE_ENV=production
-
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-USER nextjs
+# Ekspozo portën e Next.js
 EXPOSE 3000
+
+# Ndrysho portën default në 3000 dhe hostin në 0.0.0.0
 ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
-CMD ["node", "server.js"]
+# Komanda për të nisur Next.js në production
+CMD ["npm", "start"]
