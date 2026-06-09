@@ -3,10 +3,11 @@
 import { useEffect, useRef } from "react";
 
 export default function LightRingsCanvas() {
-    const canvasRef = useRef(null);
+    const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
         const canvas = canvasRef.current;
+        if (!canvas) return;
         const ctx = canvas.getContext("2d");
 
         let rotationAngle = 0;
