@@ -279,8 +279,7 @@ export default function Header() {
     }, []);
 
     return (
-        <section ref={containerRef}
-            className="relative w-full min-h-[95vh] overflow-hidden bg-[#05020a] text-white flex items-center justify-center"
+        <section ref={containerRef} className="relative w-full min-h-[95vh] overflow-hidden bg-[#05020a] text-white flex items-center justify-center md:min-h[85vh]"
         >
             {/* CANVAS */}
             <canvas ref={canvasRef}
