@@ -47,9 +47,22 @@ const cardsData = [
 
 export default function ServicesSection() {
     return (
-        <section className="w-full bg-[#13101c] py-20 md:py-28 px-6 md:px-10 relative overflow-hidden bg-[url(/images/gradient_background_image.avif)] bg-cover bg-center" style={{
-            backgroundPosition: "center bottom -550px",
-        }}>
+        <section className="w-full bg-[#13101c] py-20 md:py-28 px-6 md:px-10 relative overflow-hidden 
+        bg-[url(/images/gradient_background_image.avif)]
+        bg-cover bg-center bg-no-repeat
+
+        /* MOBILE (default <640px) */
+        min-[320px]:bg-[position:center_bottom_-800px]
+        min-[425px]:bg-[position:center_bottom_-800px]
+
+        /* TABLET (≥640px) */
+        sm:bg-[position:center_bottom_-500px]
+
+        /* DESKTOP (≥768px) */
+        md:bg-[position:center_bottom_-550px5
+
+        /* LARGE DESKTOP (opsional, ≥1024px) */
+        lg:bg-[position:center_bottom_-550px]">
             <div className="max-w-7xl mx-auto flex flex-col gap-12 relative z-10">
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
                     <div className="lg:max-w-2xl">

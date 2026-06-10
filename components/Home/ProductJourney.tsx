@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import IphoneMock from "./IphoneMock";
+import NavDots from "./mobile/NavDots";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +34,7 @@ const steps = [
 export default function ProductJourney() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const [activeStep, setActiveStep] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
         let mm = gsap.matchMedia();
@@ -56,6 +58,15 @@ export default function ProductJourney() {
         return () => mm.revert();
     }, []);
 
+    useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth < 764);
+
+        check(); // initial sync
+        window.addEventListener("resize", check);
+
+        return () => window.removeEventListener("resize", check);
+    }, []);
+
     return (
         <section ref={sectionRef} className="w-full bg-[#0f0c16] text-white relative min-h-screen md:min-h-[300vh] px-4 sm:px-[5vw] py-16 md:py-0">
             <div className="sticky top-[60px] h-auto md:h-screen flex flex-col md:flex-row items-center max-w-[1400px] mx-auto gap-10 md:gap-[6vw]">
@@ -77,28 +88,33 @@ export default function ProductJourney() {
 
                     {/* STEPS LIST */}
                     <div className="flex flex-col gap-6 md:gap-[2vw]">
-                        {steps.map((step, index) => (
-                            <div
-                                key={step.id}
-                                onClick={() => {
-                                    // Në mobile lejojmë klikimin për të ndryshuar ekranin e telefonit manually
-                                    if (window.innerWidth < 768) setActiveStep(index);
-                                }}
-                                className={`pl-6 border-l-2 transition-all duration-500 cursor-pointer md:cursor-default
+
+                        {isMobile ?
+                            ""
+                            :
+                            steps.map((step, index) => (
+                                <div
+                                    key={step.id}
+                                    onClick={() => {
+                                        // Në mobile lejojmë klikimin për të ndryshuar ekranin e telefonit manually
+                                        setActiveStep(index);
+                                    }}
+                                    className={`pl-6 border-l-2 transition-all duration-500 cursor-pointer
                                     ${index === activeStep
-                                        ? "border-[#ac24ff] opacity-100 scale-100"
-                                        : "border-[#2a2238] opacity-40 md:opacity-40 scale-[0.98]"
-                                    }
+                                            ? "border-[#ac24ff] opacity-100 scale-100"
+                                            : "border-[#2a2238] opacity-40 md:opacity-40 scale-[0.98]"
+                                        }
                                 `}
-                            >
-                                <h3 className="text-lg sm:text-xl font-medium">
-                                    {step.title}
-                                </h3>
-                                <p className="text-[#a997ce] text-sm mt-1">
-                                    {step.description}
-                                </p>
-                            </div>
-                        ))}
+                                >
+                                    <h3 className="text-lg sm:text-xl font-medium">
+                                        {step.title}
+                                    </h3>
+                                    <p className="text-[#a997ce] text-sm mt-1">
+                                        {step.description}
+                                    </p>
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
 
@@ -108,7 +124,13 @@ export default function ProductJourney() {
                         <IphoneMock step={activeStep} />
                     </div>
                 </div>
-
+                {isMobile && (
+                    <NavDots
+                        count={steps.length}
+                        active={activeStep}
+                        onSelect={(index) => setActiveStep(index)}
+                    />)
+                }
             </div>
         </section>
     );
