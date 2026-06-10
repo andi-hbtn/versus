@@ -1,5 +1,5 @@
 "use client";
-
+import { X } from 'lucide-react';
 import { ServiceFlow } from "@/app/Types/service-flow.type";
 import { useEffect } from "react";
 
@@ -37,11 +37,8 @@ export default function ServiceModal({ open, onClose, card }: Props) {
                         <span className="text-sm text-white/70">{card.caption}</span>
                     </div>
 
-                    <button
-                        onClick={onClose}
-                        className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition"
-                    >
-                        ✕
+                    <button onClick={onClose} className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition">
+                        <X color='#ffffff'/>
                     </button>
                 </div>
 
@@ -63,7 +60,7 @@ export default function ServiceModal({ open, onClose, card }: Props) {
                     </div>
 
                     <div className="text-white/60 text-sm leading-relaxed">
-                        Deep explanation area can go here (optional).  
+                        Deep explanation area can go here (optional).
                         You can extend this per service.
                     </div>
 

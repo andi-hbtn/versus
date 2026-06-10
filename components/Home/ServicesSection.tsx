@@ -47,13 +47,11 @@ const cardsData = [
 
 export default function ServicesSection() {
     return (
-        <section className="w-full bg-[#13101c] py-20 md:py-28 px-6 md:px-10 relative overflow-hidden">
-
+        <section className="w-full bg-[#13101c] py-20 md:py-28 px-6 md:px-10 relative overflow-hidden bg-[url(/images/gradient_background_image.avif)] bg-cover bg-center" style={{
+            backgroundPosition: "center bottom -550px",
+        }}>
             <div className="max-w-7xl mx-auto flex flex-col gap-12 relative z-10">
-
-                {/* HEADER */}
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-
                     <div className="lg:max-w-2xl">
                         <h3 className="font-maven text-white text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug">
                             Building solutions that help businesses move forward.<br />
@@ -62,14 +60,12 @@ export default function ServicesSection() {
                             </span>
                         </h3>
                     </div>
-
                     <div className="lg:max-w-md">
                         <p className="text-[#a997ce] text-sm sm:text-base leading-relaxed">
                             For situational clarity through constant change.
                             Proven on 530+ MW of data center builds.
                         </p>
                     </div>
-
                 </div>
 
                 {/* GRID */}
