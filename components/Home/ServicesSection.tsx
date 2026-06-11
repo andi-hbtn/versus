@@ -47,41 +47,43 @@ const cardsData = [
 
 export default function ServicesSection() {
     return (
-        <section className="w-full bg-[#13101c] py-20 md:py-28 px-6 md:px-10 relative overflow-hidden 
-        bg-[url(/images/gradient_background_image.avif)]
-        bg-cover bg-center bg-no-repeat
+        <section className="font-maven  w-full bg-[#050308] py-20 md:py-32 px-6 md:px-10 relative overflow-hidden">
 
-        /* MOBILE (default <640px) */
-        min-[320px]:bg-[position:center_bottom_-800px]
-        min-[425px]:bg-[position:center_bottom_-800px]
+            {/* FINE TECH GRID (Rrjetë inxhinierike diskrete) */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none" />
 
-        /* TABLET (≥640px) */
-        sm:bg-[position:center_bottom_-500px]
+            {/* ULTRA HIGH-END AMBIENT ORBS (Drita të fshehura në prapavijë) */}
+            <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-[#1b4dfe]/5 rounded-full blur-[160px] pointer-events-none hidden md:block" />
+            <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#ac24ff]/5 rounded-full blur-[140px] pointer-events-none hidden md:block" />
 
-        /* DESKTOP (≥768px) */
-        md:bg-[position:center_bottom_-550px5
+            <div className="max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
 
-        /* LARGE DESKTOP (opsional, ≥1024px) */
-        lg:bg-[position:center_bottom_-550px]">
-            <div className="max-w-7xl mx-auto flex flex-col gap-12 relative z-10">
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
-                    <div className="lg:max-w-2xl">
-                        <h3 className="font-maven text-white text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug">
+                {/* HEADER SECTION */}
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 border-b border-white/[0.05] pb-10">
+                    <div className="lg:max-w-3xl">
+                        {/* Technical Kicker Tag */}
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-white/10 bg-white/[0.02] text-white/50 text-[10px] font-mono uppercase tracking-widest mb-5 backdrop-blur-md">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#ac24ff] shadow-[0_0_8px_#ac24ff]" />
+                            Capabilities_Manifest_v1.0
+                        </div>
+
+                        <h3 className="text-white text-3xl sm:text-4xl lg:text-[2.6vw] font-bold leading-[1.15] tracking-tight">
                             Building solutions that help businesses move forward.<br />
-                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#2f66ff] via-[#b842ff] to-[#ff9e3b] drop-shadow-[0_2px_20px_rgba(184,66,255,0.15)]">
                                 Shaped by 9 years of building and solving.
                             </span>
                         </h3>
                     </div>
-                    <div className="lg:max-w-md">
-                        <p className="text-[#a997ce] text-sm sm:text-base leading-relaxed">
+
+                    <div className="lg:max-w-sm font-light">
+                        <p className="text-[#9686ba] text-sm sm:text-base leading-relaxed border-l-2 border-[#2f66ff]/30 pl-4">
                             For situational clarity through constant change.
-                            Proven on 530+ MW of data center builds.
+                            Proven on <span className="text-white font-mono font-medium">530+ MW</span> of data center builds.
                         </p>
                     </div>
                 </div>
 
-                {/* GRID */}
+                {/* CARDS GRID */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {cardsData.map((card) => (
                         <ServiceFlowCards key={card.id} card={card} />

@@ -28,16 +28,14 @@ const steps = [
         id: "launch",
         title: "Launch & Growth",
         description: "We deploy, optimize and support your product for long-term success."
-
     }
 ];
-
-
 
 export default function ProductJourney() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const [activeStep, setActiveStep] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
+
     useEffect(() => {
         let mm = gsap.matchMedia();
 
@@ -56,27 +54,30 @@ export default function ProductJourney() {
                 }
             });
         });
+
         return () => mm.revert();
     }, []);
 
-
-
     useEffect(() => {
         const check = () => setIsMobile(window.innerWidth < 764);
+
         check(); // initial sync
         window.addEventListener("resize", check);
-        return () => window.removeEventListener("resize", check);
 
+        return () => window.removeEventListener("resize", check);
     }, []);
 
     return (
-        <section ref={sectionRef} className="w-full bg-[#0f0c16] text-white relative min-h-screen md:min-h-[300vh] px-4 sm:px-[5vw] py-16 md:py-0">
-            <div className="sticky top-[60px] h-auto md:h-screen flex flex-col md:flex-row items-center max-w-[1400px] mx-auto gap-10 md:gap-[6vw]">
-                {/* HIGH-TECH BACKGROUND ELEMENTS (Ambient Glows) */}
-                <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] bg-[#1b4dfe]/10 rounded-full blur-[120px] pointer-events-none hidden md:block animate-pulse duration-[6000ms]" />
-                <div className="absolute bottom-1/4 right-[-10%] w-[600px] h-[600px] bg-[#ac24ff]/10 rounded-full blur-[150px] pointer-events-none hidden md:block animate-pulse duration-[8000ms]" />
-                {/* FINE TECH GRID (Sfond diskret me rrjetë) */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+        <section ref={sectionRef} className="w-full bg-[#05020a] text-white relative min-h-screen md:min-h-[300vh] px-4 sm:px-[5vw] py-16 md:py-0 overflow-hidden">
+
+            {/* HIGH-TECH BACKGROUND ELEMENTS (Ambient Glows) */}
+            <div className="absolute top-1/4 left-[-10%] w-[500px] h-[500px] bg-[#1b4dfe]/10 rounded-full blur-[120px] pointer-events-none hidden md:block animate-pulse duration-[6000ms]" />
+            <div className="absolute bottom-1/4 right-[-10%] w-[600px] h-[600px] bg-[#ac24ff]/10 rounded-full blur-[150px] pointer-events-none hidden md:block animate-pulse duration-[8000ms]" />
+
+            {/* FINE TECH GRID (Sfond diskret me rrjetë) */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+
+            <div className="sticky top-[60px] h-auto md:h-screen flex flex-col md:flex-row items-center max-w-[1400px] mx-auto gap-10 md:gap-[8vw] z-10">
 
                 {/* LEFT SIDE: Titulli dhe Hapat */}
                 <div className="w-full md:w-1/2 flex flex-col gap-8 md:gap-[4vw]">
@@ -131,7 +132,7 @@ export default function ProductJourney() {
                                             <span className={`font-mono text-xs font-semibold transition-colors duration-500
                                                 ${isActive ? "text-[#ac24ff]" : "text-[#9686ba]"}
                                             `}>
-                                               [0{index + 1}]
+                                                0{index + 1}//
                                             </span>
 
                                             <h3 className={`text-lg sm:text-xl font-semibold tracking-wide transition-all duration-500
@@ -152,24 +153,89 @@ export default function ProductJourney() {
                         }
                     </div>
                 </div>
+
                 {/* RIGHT SIDE: Telefoni Mockup */}
-                <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center mt-6 md:mt-0">
-                    <div className="w-full max-w-[280px] sm:max-w-[340px] md:max-w-[350px] transition-all duration-700">
+                <div className="w-full md:w-1/2 flex justify-center md:justify-end items-center mt-6 md:mt-0 relative">
+                    {/* Glow pas telefonit */}
+                    <div className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-[#ac24ff]/10 rounded-full blur-[80px] pointer-events-none mix-blend-screen" />
+
+                    {/* Cyber Frame Container */}
+                    <div className="w-full max-w-[280px] sm:max-w-[340px] md:max-w-[350px] transition-all duration-700 p-4 rounded-[40px] border border-white/5 bg-gradient-to-b from-white/[0.03] to-transparent backdrop-blur-md shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
                         <IphoneMock step={activeStep} />
                     </div>
                 </div>
+
                 {isMobile && (
                     <NavDots
                         count={steps.length}
                         active={activeStep}
                         onSelect={(index) => setActiveStep(index)}
-
                     />)
                 }
             </div>
         </section>
-
     );
-
 }
 
+
+
+
+
+// service-flow-section
+"use client";
+// import { useState } from "react";
+// import { ServiceFlow } from "@/app/Types/service-flow.type";
+// import ServiceModal from "./ServiceModal";
+// export default function ServiceFlowCards({ card }: { card: ServiceFlow }) {
+//     const [open, setOpen] = useState(false);
+//     return (
+//         <>
+//             {/* NEXT LEVEL GLASSMORPHIC CARD CHASSIS */}
+//             <div className="group relative bg-[#0d0b14]/40 border border-white/[0.06] rounded-2xl p-6 min-h-[280px] md:min-h-[340px] flex flex-col justify-between overflow-hidden transition-all duration-500 hover:border-[#b842ff]/40 hover:bg-[#120e1c]/50 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(184,66,255,0.08)] hover:-translate-y-1">
+//                 {/* Cyber Matrix Glow Overlay në Hover */}
+//                 <div className="absolute inset-0 -z-10 opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none scale-100 group-hover:scale-105 bg-[radial-gradient(circle_at_top,_rgba(184,66,255,0.08),transparent_60%)]">
+//                     <img
+//                         src="/images/hover_card_img.png"
+//                         className="w-full h-full object-cover mix-blend-color-dodge opacity-20"
+//                         alt="hover matrix"
+//                     />
+//                 </div>
+//                 {/* HEADER CONTENT */}
+//                 <div className="flex flex-col gap-5">
+//                     {/* Badge */}
+//                     <div className="inline-flex items-center gap-2 bg-[#09070d] border border-white/[0.08] px-3 py-1 rounded-md w-fit shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+//                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="drop-shadow-[0_0_4px_#b842ff]">
+//                             <path d={card.svgPath} fill="#b842ff" />
+//                             {card.extraSvg}
+//                         </svg>
+//                         <span className="text-[11px] font-mono font-medium tracking-wider text-[#d1c5eb]">
+//                             {card.caption.toUpperCase()}
+//                         </span>
+//                     </div>
+//                     {/* Title */}
+//                     <h4 className="text-white text-base md:text-[17px] font-medium leading-snug tracking-wide group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/70 transition-all duration-300">
+//                         {card.title}
+//                     </h4>
+//                     {/* Features List */}
+//                     <ul className="flex flex-col gap-2.5 mt-1">
+//                         {card.features.map((feat) => (
+//                             <li key={feat} className="flex items-center gap-2.5 text-[#9686ba] text-sm font-light">
+//                                 <span className="w-1 h-1 bg-[#b842ff] rounded-full shadow-[0_0_6px_#b842ff]" />
+//                                 {feat}
+//                             </li>
+//                         ))}
+//                     </ul>
+//                 </div>
+//                 {/* BUTTON (Premium Shkëlqim dhe Tranzicion i Lëmuar) */}
+//                 <div className="mt-6 pt-2 border-t border-white/[0.04]">
+//                     <button
+//                         onClick={() => setOpen(true)}
+//                         className="w-full py-2.5 rounded-xl text-xs font-mono tracking-widest uppercase text-white/90 border border-white/10 bg-white/[0.02] hover:bg-white/[0.08] hover:border-[#b842ff]/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_15px_rgba(184,66,255,0.15)] transition-all duration-300 active:scale-[0.98]">
+//                         Execute_Inquiry //
+//                     </button>
+//                 </div>
+//             </div>
+//             <ServiceModal open={open} onClose={() => setOpen(false)} card={card} />
+//         </>
+//     );
+// }
