@@ -2,14 +2,12 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="relative w-full bg-[#0f0c16] text-white overflow-hidden">
+        <footer className="font-maven  relative w-full bg-[#050308] text-white overflow-hidden">
 
             {/* Ambient glow background */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ac24ff1a,transparent_60%)] pointer-events-none" />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,#1b4dfe12,transparent_55%)] pointer-events-none" />
-
             <div className="relative max-w-[1200px] mx-auto px-6 py-24 flex flex-col gap-20">
-
                 {/* ───── HERO / BRAND MESSAGE ───── */}
                 <div className="flex flex-col items-center text-center gap-6">
                     <h2 className="font-maven text-4xl md:text-5xl font-light tracking-tight leading-tight">

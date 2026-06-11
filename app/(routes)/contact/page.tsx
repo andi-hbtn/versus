@@ -6,63 +6,95 @@ export default function ContactPage() {
         <>
             <Header />
 
-            <main className="bg-[#05020a] text-white overflow-hidden">
+            <main className="bg-[#050308] text-white overflow-hidden min-h-screen relative">
+                
+                {/* FINE TECH GRID (Rrjeta mikro në prapavijë) */}
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none" />
 
-                {/* ================= HERO ================= */}
-                <section className="font-maven relative max-w-6xl mx-auto px-6 py-20 md:py-28 text-center">
+                {/* ================= HERO HERO ================= */}
+                <section className="font-maven relative max-w-6xl mx-auto px-6 py-20 md:py-28 text-center z-10">
 
-                    {/* glow (responsive) */}
-                    <div className=" absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(172,36,255,0.10),transparent_60%)]" />
+                    {/* High-End Ambient Glow */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(184,66,255,0.08),transparent_60%)] pointer-events-none" />
 
-                    {/* LABEL */}
-                    <span className="text-white/40 uppercase tracking-[0.25em] md:tracking-[0.35em] text-[10px] sm:text-xs">
-                        Contact
-                    </span>
+                    {/* Cyber Badge */}
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md border border-white/10 bg-white/[0.02] text-white/40 text-[10px] font-mono uppercase tracking-widest backdrop-blur-md mb-6">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#2f66ff] shadow-[0_0_8px_#2f66ff]" />
+                        Secure_Inbound_Channel //
+                    </div>
 
                     {/* TITLE */}
-                    <h1 className=" mt-5 md:mt-6 text-3xl sm:text-5xl md:text-6xl font-light leading-[1.1]">
-                        Let’s build something
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
+                    <h1 className="text-4xl sm:text-6xl md:text-[4.5vw] font-light tracking-tight leading-[1.1] max-w-4xl mx-auto">
+                        Let’s build something <br />
+                        <span className="bg-gradient-to-r from-[#2f66ff] via-[#b842ff] to-[#ff9e3b] text-transparent bg-clip-text font-bold drop-shadow-[0_2px_25px_rgba(184,66,255,0.15)]">
                             that actually matters
                         </span>
                     </h1>
 
                     {/* SUBTITLE */}
-                    <p className="mt-6 text-sm sm:text-base md:text-lg text-white/60 max-w-xl md:max-w-2xl mx-auto leading-relaxed">
+                    <p className="mt-6 text-sm sm:text-base md:text-lg text-[#9686ba] max-w-xl md:max-w-2xl mx-auto font-light leading-relaxed">
                         Whether you're building SaaS platforms, CRM systems or mobile apps —
-                        we help you design, engineer and scale them.
+                        we help you design, engineer and scale them with production-grade systems.
                     </p>
 
-                    {/* RESPONSE TIME */}
-                    <div className="mt-8 text-white/30 text-xs sm:text-sm ">
-                        Response time:
-                        <span className="text-white/60"> within 24 hours</span>
+                    {/* RESPONSE TIME METRIC */}
+                    <div className="mt-8 text-[11px] font-mono text-white/30 tracking-wider uppercase">
+                        SLA_RESPONSE_TIME: <span className="text-[#ff9e3b] font-medium">&lt; 24_HOURS</span>
                     </div>
 
                 </section>
 
-                {/* ================= CONTENT ================= */}
-                <section className="max-w-6xl mx-auto px-6 pb-20 md:pb-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                {/* ================= CONTENT CONTENT ================= */}
+                <section className="max-w-6xl mx-auto px-6 pb-24 md:pb-32 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative z-10">
+                    
                     <ContactForm />
-                    {/* INFO PANEL */}
-                    <div className="flex flex-col gap-6 md:gap-10">
-                        <div className="p-6 md:p-10 rounded-2xl md:rounded-[28px] border border-white/10 bg-white/[0.02] backdrop-blur-xl">
-                            <h3 className="text-lg md:text-xl font-light mb-4 md:mb-6">Why work with us</h3>
 
-                            <ul className="space-y-3 md:space-y-4 text-white/60 text-sm md:text-base">
-                                <li>• Full-stack engineering (Web + Mobile + Backend)</li>
-                                <li>• Scalable architecture thinking</li>
-                                <li>• Direct communication</li>
-                                <li>• Performance-first mindset</li>
+                    {/* INFO MODULES */}
+                    <div className="flex flex-col gap-6 md:gap-8">
+                        
+                        {/* Why work with us */}
+                        <div className="p-6 md:p-8 rounded-xl border border-white/[0.06] bg-[#0d0b14]/30 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] relative group">
+                            <span className="absolute top-4 right-5 text-[9px] font-mono text-white/10 tracking-widest">// COGNITIVE_ADVANTAGE</span>
+                            
+                            <h3 className="text-base font-mono text-white/90 uppercase tracking-wider mb-6 pb-2 border-b border-white/[0.05]">
+                                Why work with us
+                            </h3>
+
+                            <ul className="space-y-4 text-[#9686ba] text-sm font-light">
+                                <li className="flex items-center gap-3">
+                                    <span className="w-1 h-1 rounded-full bg-[#2f66ff] shadow-[0_0_6px_#2f66ff]" />
+                                    Full-stack engineering (Web + Mobile + Backend)
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="w-1 h-1 rounded-full bg-[#b842ff] shadow-[0_0_6px_#b842ff]" />
+                                    Scalable architecture & precision systems thinking
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="w-1 h-1 rounded-full bg-[#ff9e3b] shadow-[0_0_6px_#ff9e3b]" />
+                                    Direct communication without corporate layers
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <span className="w-1 h-1 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.5)]" />
+                                    Performance-first, zero-overhead execution
+                                </li>
                             </ul>
                         </div>
 
-                        <div className="p-6 md:p-10 rounded-2xl md:rounded-[28px] border border-white/10 bg-white/[0.02] backdrop-blur-xl">
-                            <h3 className="text-lg md:text-xl font-light mb-4 md:mb-6">Direct contact </h3>
-
-                            <div className="text-white/60 text-sm md:text-base space-y-2">
-                                <p>Email: <span className="text-white">hello@versus.dev</span> </p>
-                                <p> Response: <span className="text-white">within 24h</span></p>
+                        {/* Direct contact */}
+                        <div className="p-6 md:p-8 rounded-xl border border-white/[0.06] bg-[#0d0b14]/30 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] relative">
+                            <span className="absolute top-4 right-5 text-[9px] font-mono text-white/10 tracking-widest">// DIRECT_PINGS</span>
+                            <h3 className="text-base font-mono text-white/90 uppercase tracking-wider mb-6 pb-2 border-b border-white/[0.05]">
+                                Direct routing
+                            </h3>
+                            <div className="text-[#9686ba] text-sm font-light space-y-3">
+                                <p className="flex items-center justify-between">
+                                    <span>EMAIL_ENDPOINT:</span>
+                                    <span className="text-white font-mono font-medium hover:text-[#b842ff] transition-colors cursor-pointer">hello@versus.dev</span>
+                                </p>
+                                <p className="flex items-center justify-between">
+                                    <span>ENCRYPTED_COMMS:</span>
+                                    <span className="text-white font-mono">TLS_1.3_ACTIVE</span>
+                                </p>
                             </div>
                         </div>
 

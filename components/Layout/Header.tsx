@@ -311,19 +311,20 @@ export default function Header() {
                     We design and engineer high-performance SaaS platforms with precision systems thinking.
                 </p>
 
+                {/* High-End Enterprise CTA Buttons */}
                 <div ref={buttonsRef}
-                    className="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto"
+                    className="mt-10 sm:mt-14 flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
                 >
                     <Link
                         href="/book-call"
-                        className="px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-white text-black font-medium hover:scale-105 active:scale-95 transition-transform text-sm sm:text-base text-center"
+                        className="px-8 py-3 rounded-lg bg-white text-black font-mono text-xs tracking-widest uppercase font-medium hover:bg-white/90 hover:shadow-[0_0_25px_rgba(255,255,255,0.25)] active:scale-[0.98] transition-all text-center border border-white"
                     >
                         Initiate Project
                     </Link>
 
                     <Link
                         href="/case-studies"
-                        className="px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-white/20 text-white/80 hover:border-white/40 active:scale-95 transition-all text-sm sm:text-base text-center"
+                        className="px-8 py-3 rounded-lg border border-white/10 bg-white/[0.02] text-white/80 font-mono text-xs tracking-widest uppercase hover:bg-white/[0.08] hover:border-[#2f66ff]/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(47,102,255,0.15)] active:scale-[0.98] transition-all text-center"
                     >
                         Case Studies
                     </Link>

@@ -21,9 +21,9 @@ export default function FluidMorphingDock({ count, active, onSelect }: NavDotsPr
 
     return (
         <div className="flex justify-center items-center py-8 select-none">
-            {/* Premium Apple-Style Glass Track */}
+            {/* NEXT-LEVEL CYBERNETIC GLASS TRACK */}
             <nav
-                className="relative flex items-center gap-3 px-4 py-3 rounded-full border border-white/[0.04] bg-[#0d0d11]/40 backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.08),0_12px_40px_rgba(0,0,0,0.35)]"
+                className="relative flex items-center gap-3 px-[18px] py-3.5 rounded-full border border-white/[0.06] bg-[#06040a]/60 backdrop-blur-3xl shadow-[inset_0_1px_2px_rgba(255,255,255,0.08),0_20px_50px_rgba(0,0,0,0.6)]"
                 aria-label="Pagination"
                 style={{
                     // Krijon tranzicionin elastik "Morphing" gjatë ndryshimit të indeksit
@@ -31,20 +31,22 @@ export default function FluidMorphingDock({ count, active, onSelect }: NavDotsPr
                 } as React.CSSProperties}
             >
 
-                {/* SHTRESA FLUIDE (Kapsula që morph-on dhe rrëshqet mbi pika) */}
+                {/* SHTRESA FLUIDE (Kapsula High-Tech me gradient dhe lazer glow) */}
                 <div
-                    className="absolute left-4 h-[6px] rounded-full will-change-[transform,width] pointer-events-none"
+                    className="absolute left-[18px] h-[6px] rounded-full will-change-[transform,width] pointer-events-none"
                     style={{
                         width: `${ACTIVE_WIDTH}px`,
-                        background: "linear-gradient(90deg, #ffffff 0%, #e2e8f0 100%)",
+                        // Kalimi te gradienti zyrtar i projektit për sinkronizim total vizual
+                        background: "linear-gradient(90deg, #2f66ff 0%, #b842ff 100%)",
                         transform: `translateX(${transformX}px)`,
                         // Tranzicion i personalizuar kubik (Custom Spring-like Bezier) që simulon fizikën e iOS
                         transition: "transform 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.12), width 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
-                        boxShadow: "0 0 16px 1px rgba(255, 255, 255, 0.24), inset 0 1px 0.5px rgba(255, 255, 255, 0.4)",
+                        // Shtuar një glow i fshehur neon nën kapsulë që ecën bashkë me të
+                        boxShadow: "0 0 14px rgba(184, 66, 255, 0.5), inset 0 1px 0.5px rgba(255, 255, 255, 0.3)",
                     }}
                 >
                     {/* Micro High-End Refraction Ray brenda kapsulës */}
-                    <span className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent rounded-full opacity-60" />
+                    <span className="absolute inset-0 bg-gradient-to-b from-white/30 to-transparent rounded-full opacity-50" />
                 </div>
 
                 {/* PIKAT PASIVE (Anchor Points) */}
@@ -75,19 +77,19 @@ export default function FluidMorphingDock({ count, active, onSelect }: NavDotsPr
                         >
                             {/* Pika e Background-it (Duket vetëm nëse nuk është aktive) */}
                             <span
-                                className="block h-[6px] rounded-full transition-all duration-500"
+                                className="block h-[5px] rounded-full transition-all duration-500"
                                 style={{
                                     width: `${DOT_WIDTH}px`,
                                     backgroundColor: isActive
                                         ? "transparent"
-                                        : "rgba(255, 255, 255, 0.16)",
+                                        : "rgba(172, 36, 255, 0.2)", // Ndryshuar nga gri në një violë tech shumë të fshehur
                                     transform: isActive ? "scale(0)" : "scale(1)",
                                 }}
                             />
 
-                            {/* Advanced Glow Target në Hover */}
+                            {/* Advanced Glow Target në Hover / Touch */}
                             {!isActive && (
-                                <span className="absolute h-6 w-6 rounded-full bg-white/[0.03] opacity-0 scale-50 transition-all duration-300 ease-out group-hover:scale-110 group-hover:opacity-100 group-focus-visible:scale-110 group-focus-visible:opacity-100" />
+                                <span className="absolute h-5 w-5 rounded-full bg-[#ac24ff]/10 opacity-0 scale-50 transition-all duration-300 ease-out group-hover:scale-110 group-hover:opacity-100 group-focus-visible:scale-110 group-focus-visible:opacity-100 border border-[#ac24ff]/20" />
                             )}
                         </button>
                     );
