@@ -46,12 +46,9 @@ export default function ContactPage() {
 
                 {/* ================= CONTENT CONTENT ================= */}
                 <section className="max-w-6xl mx-auto px-6 pb-24 md:pb-32 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 relative z-10">
-
                     <ContactForm />
-
                     {/* INFO MODULES */}
                     <div className="flex flex-col gap-6 md:gap-8">
-
                         {/* Why work with us */}
                         <div className="p-6 md:p-8 rounded-xl border border-white/[0.06] bg-[#0d0b14]/30 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] relative group">
                             <span className="absolute top-4 right-5 text-[9px] font-mono text-white/10 tracking-widest">// COGNITIVE_ADVANTAGE</span>
@@ -59,7 +56,6 @@ export default function ContactPage() {
                             <h3 className="text-base font-mono text-white/90 uppercase tracking-wider mb-6 pb-2 border-b border-white/[0.05]">
                                 Why work with us
                             </h3>
-
                             <ul className="space-y-4 text-[#9686ba] text-sm font-light">
                                 <li className="flex items-center gap-3">
                                     <span className="w-1 h-1 rounded-full bg-cyan-400 shadow-[0_0_6px_rgba(34,211,238,0.6)]" />
@@ -70,7 +66,6 @@ export default function ContactPage() {
                                     <span className="w-1 h-1 rounded-full bg-indigo-400 shadow-[0_0_6px_rgba(99,102,241,0.6)]" />
                                     From idea → MVP → scale — end-to-end ownership
                                 </li>
-
                                 <li className="flex items-center gap-3">
                                     <span className="w-1 h-1 rounded-full bg-pink-400 shadow-[0_0_6px_rgba(244,114,182,0.6)]" />
                                     High-performance UX with obsessive attention to detail
@@ -80,12 +75,10 @@ export default function ContactPage() {
                                     <span className="w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_6px_rgba(110,231,183,0.6)]" />
                                     Built for founders — systems that grow with the business
                                 </li>
-
                                 <li className="flex items-center gap-3">
                                     <span className="w-1 h-1 rounded-full bg-yellow-400 shadow-[0_0_6px_rgba(250,204,21,0.6)]" />
                                     Rapid iteration cycles — ship, test, improve, repeat
                                 </li>
-
                                 <li className="flex items-center gap-3">
                                     <span className="w-1 h-1 rounded-full bg-violet-400 shadow-[0_0_6px_rgba(167,139,250,0.6)]" />
                                     Engineering decisions driven by business impact, not trends
