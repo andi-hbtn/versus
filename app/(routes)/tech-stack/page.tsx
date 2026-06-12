@@ -35,28 +35,25 @@ export default function TechStackPage() {
     ];
 
     return (
-        <main className="bg-[#05020a] text-white min-h-screen overflow-hidden">
-
+        <main className="bg-[#05020a] text-white  overflow-hidden">
             {/* HERO */}
-            <section className="relative max-w-6xl mx-auto px-6 py-28 text-center">
-
+            <section className="font-maven relative min-h-[85vh] md:min-h-[80vh] flex items-center justify-center px-6 py-16 md:py-0">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(27,79,254,0.12),transparent_60%)]" />
+                <div className="relative max-w-5xl text-center px-4 sm:px-6">
 
-                <span className="text-white/40 uppercase tracking-[0.35em] text-xs">
-                    Technology Stack
-                </span>
-
-                <h1 className="mt-6 text-4xl md:text-6xl font-light leading-tight">
-                    Built with
-                    <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#2563eb] to-[#60a5fa]">
-                        production-grade engineering tools
+                    <span className="text-white/40 uppercase tracking-[0.35em] text-xs">
+                        Technology Stack
                     </span>
-                </h1>
-
-                <p className="mt-6 text-white/60 max-w-2xl mx-auto">
-                    A carefully selected stack across frontend, backend, databases and infrastructure — designed for scalable systems.
-                </p>
-
+                    <h1 className="mt-6 text-4xl md:text-6xl font-light leading-tight">
+                        Built with
+                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#2563eb] to-[#60a5fa]">
+                            production-grade engineering tools
+                        </span>
+                    </h1>
+                    <p className="mt-6 text-white/60 max-w-2xl mx-auto">
+                        A carefully selected stack across frontend, backend, databases and infrastructure — designed for scalable systems.
+                    </p>
+                </div>
             </section>
             <ContentSection values={stack} />
         </main>

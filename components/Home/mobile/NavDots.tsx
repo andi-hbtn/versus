@@ -20,7 +20,7 @@ export default function FluidMorphingDock({ count, active, onSelect }: NavDotsPr
     const transformX = active * (DOT_WIDTH + DOT_GAP);
 
     return (
-        <div className="flex justify-center items-center py-8 select-none">
+        <div className="flex justify-center items-center py-2 select-none">
             {/* NEXT-LEVEL CYBERNETIC GLASS TRACK */}
             <nav
                 className="relative flex items-center gap-3 px-[18px] py-3.5 rounded-full border border-white/[0.06] bg-[#06040a]/60 backdrop-blur-3xl shadow-[inset_0_1px_2px_rgba(255,255,255,0.08),0_20px_50px_rgba(0,0,0,0.6)]"

@@ -86,14 +86,12 @@ export default function ProductJourney() {
                             <span className="w-1.5 h-1.5 rounded-full bg-[#ac24ff] animate-ping" />
                             Workflow Execution
                         </div>
-
                         <h2 className="font-maven text-4xl sm:text-5xl lg:text-[3.5vw] font-bold leading-[1.1] tracking-tight">
                             From idea <br />
                             <span className="font-maven bg-gradient-to-r from-[#2f66ff] via-[#b842ff] to-[#ff9e3b] text-transparent bg-clip-text drop-shadow-[0_2px_20px_rgba(184,66,255,0.2)]">
                                 to launch.
                             </span>
                         </h2>
-
                         <p className="text-[#9686ba] mt-4 max-w-full md:max-w-[28vw] text-base sm:text-lg font-light leading-relaxed">
                             A highly optimized blueprint that engineered concept formulation into high-performing digital architecture.
                         </p>
@@ -103,7 +101,6 @@ export default function ProductJourney() {
                     <div className="flex flex-col gap-4 md:gap-[1.2vw] relative">
                         {/* Vija vertikale "Glow" në background e të gjithë hapave */}
                         <div className="absolute left-[3px] top-2 bottom-2 w-[1px] bg-gradient-to-b from-[#2a2238] via-[#2a2238] to-transparent hidden md:block" />
-
                         {isMobile ?
                             ""
                             :
@@ -168,7 +165,6 @@ export default function ProductJourney() {
                 }
             </div>
         </section>
-
     );
 
 }
