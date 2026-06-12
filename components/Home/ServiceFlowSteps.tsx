@@ -50,7 +50,7 @@ export default function ServiceFlowCards({ card }: { card: ServiceFlow }) {
                 <div className="mt-6 pt-4">
                     <button
                         onClick={() => setOpen(true)}
-                        className="w-full py-3 rounded-xl text-sm font-medium text-white bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b] bg-[length:300%_100%] bg-left hover:bg-right transition-all duration-500">
+                        className="cursor-pointer w-full py-3 rounded-xl text-sm font-medium text-white bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b] bg-[length:300%_100%] bg-left hover:bg-right transition-all duration-500">
                         Show me more
                     </button>
                 </div>

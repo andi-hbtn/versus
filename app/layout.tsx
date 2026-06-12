@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable, mavenPro.variable)}
+      className={cn("scroll-smooth", "h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable, mavenPro.variable)}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
