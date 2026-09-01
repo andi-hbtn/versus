@@ -319,14 +319,14 @@ export default function Header() {
                         href="/book-call"
                         className="px-8 py-3 rounded-lg bg-white text-black font-mono text-xs tracking-widest uppercase font-medium hover:bg-white/90 hover:shadow-[0_0_25px_rgba(255,255,255,0.25)] active:scale-[0.98] transition-all text-center border border-white"
                     >
-                        Initiate Project
+                        Start Now
                     </Link>
 
                     <Link
                         href="/case-studies"
                         className="px-8 py-3 rounded-lg border border-white/10 bg-white/[0.02] text-white/80 font-mono text-xs tracking-widest uppercase hover:bg-white/[0.08] hover:border-[#2f66ff]/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(47,102,255,0.15)] active:scale-[0.98] transition-all text-center"
                     >
-                        Case Studies
+                        What We Built
                     </Link>
                 </div>
 

@@ -23,7 +23,7 @@ export default function Navbar() {
                     <Image
                         src="/images/versus_one.png"
                         className="w-32 h-auto"
-                        alt="Versus Logo"
+                        alt="Versus One Logo"
                         width={150}
                         height={150}
                         priority

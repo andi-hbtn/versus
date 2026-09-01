@@ -6,7 +6,7 @@ export default function AboutPage() {
         {
             id: 1,
             title: "Honest engineering",
-            description: "We build with integrity — no shortcuts, no hidden complexity, only solutions we can stand behind."
+            description: "We build with integrity. No shortcuts, no hidden complexity, only solutions we can stand behind."
         },
         {
             id: 2,
@@ -16,7 +16,7 @@ export default function AboutPage() {
         {
             id: 3,
             title: "Quality over competition",
-            description: "We don’t chase others — we set higher standards through clean, reliable and scalable systems."
+            description: "We don’t chase others. We set higher standards through clean, reliable and scalable systems."
         },
         {
             id: 4,
@@ -26,7 +26,7 @@ export default function AboutPage() {
         {
             id: 5,
             title: "Respect for craft",
-            description: "Engineering is treated as craftsmanship — precision, discipline and attention to detail in every line of code."
+            description: "Engineering is treated as craftsmanship: precision, discipline and attention to detail in every line of code."
         },
         {
             id: 6,
@@ -41,7 +41,7 @@ export default function AboutPage() {
         {
             id: 8,
             title: "Continuous improvement",
-            description: "We evolve constantly — improving systems, processes and outcomes with every iteration."
+            description: "We evolve constantly, improving systems, processes and outcomes with every iteration."
         }
     ];
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 <div className="relative max-w-5xl text-center px-4 sm:px-6">
                     {/* LABEL */}
                     <span className="text-white/40 uppercase tracking-[0.25em] md:tracking-[0.35em] text-[10px] sm:text-xs">
-                        About Versus
+                        About Versus One
                     </span>
                     {/* TITLE */}
                     <h1 className="mt-5 md:mt-6 text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight leading-[1.1]">
@@ -68,13 +68,18 @@ export default function AboutPage() {
                         </span>
 
                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#1b4dfe] via-[#ac24ff] to-[#fe881b]">
-                            engineered for scale
+                            engineered to scale
                         </span>
                     </h1>
 
                     {/* SUBTITLE */}
                     <p className="mt-6 md:mt-8 text-sm sm:text-base md:text-lg text-white/50 max-w-xl md:max-w-2xl mx-auto leading-relaxed">
                         We are a software studio focused on building high-performance SaaS platforms, e-commerce systems and custom digital products.
+                    </p>
+
+                    {/* NAME ORIGIN */}
+                    <p className="mt-5 md:mt-6 text-sm sm:text-base text-white/40 max-w-xl md:max-w-2xl mx-auto leading-relaxed">
+                        The name Versus One comes from a simple idea: your only real competitor is the version of your product you shipped yesterday.
                     </p>
 
                 </div>

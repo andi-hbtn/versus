@@ -14,7 +14,7 @@ export default function ServicesPage() {
             id: 2,
             title: "E-Commerce Systems",
             description:
-                "Custom e-commerce solutions built for growth — optimized checkout flows, product systems, admin dashboards and conversion-driven UX."
+                "Custom e-commerce solutions built for growth, with optimized checkout flows, product systems, admin dashboards and conversion-driven UX."
         },
         {
             id: 3,
@@ -32,7 +32,7 @@ export default function ServicesPage() {
             id: 5,
             title: "Custom Software Engineering",
             description:
-                "Tailor-made systems designed around your business logic — from SaaS platforms to internal tools and complex backend architectures."
+                "Tailor-made systems designed around your business logic, from SaaS platforms to internal tools and complex backend architectures."
         },
         {
             id: 6,
@@ -96,7 +96,7 @@ export default function ServicesPage() {
                         text-[10px]
                         sm:text-xs
                     ">
-                        Versus Services
+                        Versus One Services
                     </span>
 
                     {/* TITLE */}

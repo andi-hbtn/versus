@@ -1,45 +1,84 @@
 import Header from "@/components/Layout/Header";
-import ContentSection from "@/components/Shared/ContentSection";
+import CaseStudiesGrid from "@/components/Shared/CaseStudiesGrid";
+import { CaseStudy } from "@/app/Types/case-study.types";
 import Link from "next/link";
 
 export default function CaseStudiesPage() {
 
-    const cases = [
+    const cases: CaseStudy[] = [
         {
             id: 1,
-            title: "SaaS Architecture for High-Load Systems",
+            client: "Touch Revolution",
+            sector: "Interactive Technology",
             description:
-                "Designed and engineered a modular SaaS architecture optimized for scale, multi-tenant performance and long-term maintainability under high traffic loads."
+                "Corporate and product site for an Italian maker of interactive tables, digital totems, holograms and touchscreen installations for retail, museums, events and education.",
+            url: "http://touchrevolution.it/en",
+            tags: ["Corporate site", "Product showcase", "Multi-language"]
         },
         {
             id: 2,
-            title: "Conversion-Driven E-Commerce Engine",
+            client: "Ovla Systems",
+            sector: "Software Services",
             description:
-                "Built a performance-first commerce system with optimized checkout flows, product indexing, and UX patterns focused on maximizing conversion rates."
+                "Corporate site for a software house covering web and mobile development, UI/UX, blockchain, AI/ML and cybersecurity, structured around services and a work archive.",
+            url: "https://www.ovlasystems.com/",
+            tags: ["Corporate site", "Work archive", "Lead generation"]
         },
         {
             id: 3,
-            title: "Enterprise Workflow Intelligence Platform",
+            client: "Itama Yacht",
+            sector: "Luxury Marine",
             description:
-                "Developed an internal system that unified operations, automated workflows, and provided real-time visibility across teams and business units."
+                "Brand and model catalogue for the Ferretti Group open-yacht marque, presenting a fleet from 45 to 75 feet with lifestyle editorial and regional entry points for buyers.",
+            url: "https://www.itama-yacht.com/en-us/",
+            tags: ["Brand site", "Model catalogue", "Multi-region"]
         },
         {
             id: 4,
-            title: "Real-Time Scheduling & Availability System",
+            client: "Tecnavia eEdition",
+            sector: "Digital Publishing",
             description:
-                "Engineered a dynamic booking infrastructure with real-time availability sync, conflict prevention and seamless multi-device coordination."
+                "Digital publishing platform for newspapers and magazines, delivering digital replicas, paywalls, subscription management and advertising across web, iOS and Android.",
+            url: "http://www.tecnavia.com/eedition/",
+            tags: ["Publishing platform", "Paywall & subscriptions", "Web, iOS & Android"]
         },
         {
             id: 5,
-            title: "Custom Automation & Process Engine",
+            client: "Vito Di Bari",
+            sector: "Personal Brand",
             description:
-                "Built a system that replaced manual operations with structured automation pipelines, reducing operational friction and improving execution speed."
+                "Portfolio and booking site for a futurist and keynote speaker advising companies and governments on AI and emerging technology, built around talks, editorial and enquiries.",
+            url: "http://www.vitodibari.com",
+            tags: ["Portfolio site", "Speaker booking", "Editorial content"]
         },
         {
+            // TODO: domain does not currently resolve. Confirm the live URL and the
+            // copy below with the client before this card ships.
             id: 6,
-            title: "Cross-Platform Mobile Experience Layer",
+            client: "Lumetti Ceramiche",
+            sector: "Ceramics & Interiors",
             description:
-                "Delivered a unified mobile system with shared backend logic, optimized performance layers and consistent UX across iOS and Android."
+                "Catalogue site for an Italian ceramics manufacturer, presenting collections, finishes and technical detail for specifiers and retail customers.",
+            url: "http://www.lumetticeramiche.com",
+            tags: ["Product catalogue", "Collections", "Corporate site"]
+        },
+        {
+            id: 7,
+            client: "Profilegno",
+            sector: "Wood Flooring",
+            description:
+                "Product catalogue for a Vicenza parquet manufacturer, covering engineered and solid wood floors in oak, walnut, chestnut and teak alongside PEFC, CE and A+ certification detail.",
+            url: "https://www.profilegno.net/it/",
+            tags: ["Product catalogue", "Technical specs", "Multi-language"]
+        },
+        {
+            id: 8,
+            client: "Monpar",
+            sector: "Wood Flooring",
+            description:
+                "Catalogue and brand site for an Alonte parquet maker, presenting ten collections with customisable essences, thicknesses and colour finishes for residential and commercial use.",
+            url: "http://www.monpar.com/",
+            tags: ["Product catalogue", "Collections & finishes", "Corporate site"]
         }
     ];
 
@@ -55,7 +94,7 @@ export default function CaseStudiesPage() {
                     <div className="absolute w-[700px] h-[700px] bg-white/10 blur-[200px] rounded-full opacity-60" />
                     <div className="relative max-w-5xl text-center">
                         <span className="text-white/40 uppercase tracking-[0.35em] text-xs">
-                            Case Studies Archive
+                            What We Built
                         </span>
                         <h1 className="mt-6 text-5xl md:text-7xl font-extralight leading-tight">
                             <span className="block">
@@ -66,7 +105,7 @@ export default function CaseStudiesPage() {
                             </span>
                         </h1>
                         <p className="mt-8 text-white/50 max-w-2xl mx-auto text-lg">
-                            A collection of engineering outcomes built under real-world load, scale, and business pressure — not prototypes.
+                            A collection of engineering outcomes built under real-world load, scale, and business pressure, not prototypes.
                         </p>
                         {/* micro trust strip */}
                         <div className="mt-10 flex justify-center gap-6 text-xs text-white/40">
@@ -80,7 +119,7 @@ export default function CaseStudiesPage() {
                 </section>
 
                 {/* ================= CASE STUDIES ================= */}
-                <ContentSection values={cases} />
+                <CaseStudiesGrid cases={cases} />
                 {/* ================= IMPACT SECTION ================= */}
                 <section className="max-w-6xl mx-auto px-6 py-32">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -118,10 +157,10 @@ export default function CaseStudiesPage() {
                         We design systems where architecture, performance and UX are treated as one.
                     </p>
                     <Link
-                        href="/contact"
+                        href="/book-call"
                         className="inline-flex mt-10 px-10 py-4 rounded-full bg-gradient-to-r from-[#1b4dfe] via-[#2563eb] to-[#60a5fa] text-white font-medium hover:opacity-90 transition"
                     >
-                        Start a project
+                        Start Now
                     </Link>
                 </section>
             </main>

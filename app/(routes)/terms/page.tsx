@@ -19,7 +19,7 @@ export default function TermsPage() {
                     </h1>
 
                     <p className="mt-6 text-white/50">
-                        Clear rules for using our services and collaborating with Versus.
+                        Clear rules for using our services and collaborating with Versus One.
                     </p>
                 </div>
             </section>

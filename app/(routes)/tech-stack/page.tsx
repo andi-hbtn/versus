@@ -51,7 +51,7 @@ export default function TechStackPage() {
                         </span>
                     </h1>
                     <p className="mt-6 text-white/60 max-w-2xl mx-auto">
-                        A carefully selected stack across frontend, backend, databases and infrastructure — designed for scalable systems.
+                        A carefully selected stack across frontend, backend, databases and infrastructure, designed for scalable systems.
                     </p>
                 </div>
             </section>

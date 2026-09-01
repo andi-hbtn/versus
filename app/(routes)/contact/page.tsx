@@ -33,7 +33,7 @@ export default function ContactPage() {
 
                     {/* SUBTITLE */}
                     <p className="mt-6 text-sm sm:text-base md:text-lg text-[#9686ba] max-w-xl md:max-w-2xl mx-auto font-light leading-relaxed">
-                        Whether you're building SaaS platforms, CRM systems or mobile apps —
+                        Whether you're building SaaS platforms, CRM systems or mobile apps,
                         we help you design, engineer and scale them with production-grade systems.
                     </p>
 
@@ -59,12 +59,12 @@ export default function ContactPage() {
                             <ul className="space-y-4 text-[#9686ba] text-sm font-light">
                                 <li className="flex items-center gap-3">
                                     <span className="w-1 h-1 rounded-full bg-cyan-400 shadow-[0_0_6px_rgba(34,211,238,0.6)]" />
-                                    Product-first mindset — we think like builders, not executors
+                                    Product-first mindset: we think like builders, not executors
                                 </li>
 
                                 <li className="flex items-center gap-3">
                                     <span className="w-1 h-1 rounded-full bg-indigo-400 shadow-[0_0_6px_rgba(99,102,241,0.6)]" />
-                                    From idea → MVP → scale — end-to-end ownership
+                                    From idea → MVP → scale, with end-to-end ownership
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <span className="w-1 h-1 rounded-full bg-pink-400 shadow-[0_0_6px_rgba(244,114,182,0.6)]" />
@@ -73,11 +73,11 @@ export default function ContactPage() {
 
                                 <li className="flex items-center gap-3">
                                     <span className="w-1 h-1 rounded-full bg-emerald-300 shadow-[0_0_6px_rgba(110,231,183,0.6)]" />
-                                    Built for founders — systems that grow with the business
+                                    Built for founders, with systems that grow with the business
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <span className="w-1 h-1 rounded-full bg-yellow-400 shadow-[0_0_6px_rgba(250,204,21,0.6)]" />
-                                    Rapid iteration cycles — ship, test, improve, repeat
+                                    Rapid iteration cycles: ship, test, improve, repeat
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <span className="w-1 h-1 rounded-full bg-violet-400 shadow-[0_0_6px_rgba(167,139,250,0.6)]" />

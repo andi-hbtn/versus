@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 import { sendEmailAction } from "./actions";
 import { FormState } from "@/app/Types/send-email";
 
@@ -13,6 +13,13 @@ export default function ContactForm() {
 
     const formFields = ["name", "email", "company"] as const;
     const [state, formAction, isPending] = useActionState(sendEmailAction, initialState);
+    const formRef = useRef<HTMLFormElement>(null);
+
+    // Clear the fields once a message is delivered, so a second submit
+    // cannot silently resend the same enquiry.
+    useEffect(() => {
+        if (state.success) formRef.current?.reset();
+    }, [state.success]);
 
     return (
         <div className="relative p-6 md:p-8 rounded-xl border border-white/[0.06] bg-[#0d0b14]/40 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_20px_50px_rgba(0,0,0,0.4)] overflow-hidden group">
@@ -23,7 +30,7 @@ export default function ContactForm() {
             <div className="relative z-10">
                 <div className="flex justify-between items-center mb-6 md:mb-8 pb-2 border-b border-white/[0.05]">
                     <h2 className="text-base font-mono text-white/90 uppercase tracking-wider">
-                        Initialize_Session //
+                        Start Now
                     </h2>
                     <span className="text-[9px] font-mono text-white/20 tracking-widest">FORM_ID: 0x9B4</span>
                 </div>
@@ -42,7 +49,7 @@ export default function ContactForm() {
                     </div>
                 )}
 
-                <form action={formAction} className="flex flex-col gap-4">
+                <form ref={formRef} action={formAction} className="flex flex-col gap-4">
                     
                     {/* INPUTS (Stil Inputi kibernetik i pastër) */}
                     {formFields.map((field) => (
@@ -52,8 +59,10 @@ export default function ContactForm() {
                                 autoComplete="off"
                                 placeholder={
                                     field === "company"
-                                        ? "Company_Name (Optional)"
-                                        : field.toUpperCase() + "_IDENTIFIER"
+                                        ? "Company (optional)"
+                                        : field === "email"
+                                            ? "Your email"
+                                            : "Your name"
                                 }
                                 className="w-full px-4 py-3 rounded-lg bg-[#050308]/60 border border-white/10 text-white font-mono text-xs md:text-sm tracking-wide placeholder-white/20 outline-none focus:border-[#2f66ff]/60 focus:bg-[#09070d] focus:shadow-[0_0_15px_rgba(47,102,255,0.1)] transition-all"
                             />
@@ -69,7 +78,7 @@ export default function ContactForm() {
                     <div className="relative">
                         <textarea
                             name="message"
-                            placeholder="PROJECT_SCOPE_AND_OBJECTIVES..."
+                            placeholder="Tell us about your project"
                             rows={5}
                             className="w-full px-4 py-3 rounded-lg bg-[#050308]/60 border border-white/10 text-white font-mono text-xs md:text-sm tracking-wide placeholder-white/20 outline-none resize-none focus:border-[#b842ff]/60 focus:bg-[#09070d] focus:shadow-[0_0_15px_rgba(184,66,255,0.1)] transition-all"
                         />

@@ -28,7 +28,7 @@ export default function BookCallPage() {
                     {/* SUBTITLE */}
                     <p className="mt-6 md:mt-8 text-sm sm:text-base md:text-lg text-white/50 max-w-xl md:max-w-2xl mx-auto leading-relaxed">
                         We’ll review your idea, define the technical approach,
-                        and help you understand exactly how to build it — from architecture to execution.
+                        and help you understand exactly how to build it, from architecture to execution.
                     </p>
 
                     {/* TRUST ROW */}

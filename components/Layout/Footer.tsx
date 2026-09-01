@@ -19,7 +19,7 @@ export default function Footer() {
 
                     <p className="text-white/50 max-w-[520px] text-sm leading-relaxed">
                         We design, build and scale digital products with a focus on clarity,
-                        performance and user experience — from idea to launch.
+                        performance and user experience, from idea to launch.
                     </p>
                 </div>
 
@@ -50,7 +50,7 @@ export default function Footer() {
                         <span className="text-xs text-white/40 uppercase tracking-widest">Explore</span>
                         <div className="mt-4 flex flex-col gap-2 text-sm text-white/70">
                             <Link href="/services" className="hover:text-white transition">Services</Link>
-                            <Link href="/case-studies" className="hover:text-white transition">Case Studies</Link>
+                            <Link href="/case-studies" className="hover:text-white transition">What We Built</Link>
                         </div>
                     </div>
 
@@ -66,10 +66,7 @@ export default function Footer() {
                         <span className="text-xs text-white/40 uppercase tracking-widest">Support</span>
                         <div className="mt-4 flex flex-col gap-2 text-sm text-white/70">
                             <Link href="/contact" className="hover:text-white transition">Contact</Link>
-                            <Link href="https://calendly.com/andi-bevapi/30min"
-                                target="_blank"
-                                className="hover:text-white transition"
-                            >
+                            <Link href="/book-call" className="hover:text-white transition">
                                 Schedule your call
                             </Link>
                         </div>
@@ -95,7 +92,7 @@ export default function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-white/10 text-sm text-white/40">
 
                     <span className="font-maven">
-                        © {new Date().getFullYear()} Platforma. All rights reserved.
+                        © {new Date().getFullYear()} Versus One. All rights reserved.
                     </span>
 
                     <div className="font-maven flex gap-6">
