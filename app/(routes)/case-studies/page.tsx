@@ -4,10 +4,29 @@ import { CaseStudy } from "@/app/Types/case-study.types";
 import Link from "next/link";
 
 export default function CaseStudiesPage() {
-
     const cases: CaseStudy[] = [
         {
             id: 1,
+            client: "London Glass Fitting",
+            sector: "Glass & Construction",
+            description:
+                "Business website for a company specialising in the sale and supply of glass, glazing products and components used to connect, support and install glass systems for residential and commercial projects.",
+            url: "https://londonglassfittings-frontend.njxb34.easypanel.host/",
+            tags: ["Corporate site", "Glass products", "Construction components"]
+        },
+
+        {
+            id: 2,
+            client: "Marina Bay",
+            sector: "Hospitality & Leisure",
+            description:
+                "Hospitality website for a destination combining hotel accommodation, bar and restaurant services, swimming pool facilities and a relaxed leisure experience for guests and visitors.",
+            url: "https://marinabay.al/",
+            tags: ["Hotel", "Restaurant & Bar", "Swimming pool"]
+        },
+
+        {
+            id: 3,
             client: "Touch Revolution",
             sector: "Interactive Technology",
             description:
@@ -15,8 +34,9 @@ export default function CaseStudiesPage() {
             url: "http://touchrevolution.it/en",
             tags: ["Corporate site", "Product showcase", "Multi-language"]
         },
+
         {
-            id: 2,
+            id: 4,
             client: "Ovla Systems",
             sector: "Software Services",
             description:
@@ -24,8 +44,9 @@ export default function CaseStudiesPage() {
             url: "https://www.ovlasystems.com/",
             tags: ["Corporate site", "Work archive", "Lead generation"]
         },
+
         {
-            id: 3,
+            id: 5,
             client: "Itama Yacht",
             sector: "Luxury Marine",
             description:
@@ -33,8 +54,9 @@ export default function CaseStudiesPage() {
             url: "https://www.itama-yacht.com/en-us/",
             tags: ["Brand site", "Model catalogue", "Multi-region"]
         },
+
         {
-            id: 4,
+            id: 6,
             client: "Tecnavia eEdition",
             sector: "Digital Publishing",
             description:
@@ -42,8 +64,9 @@ export default function CaseStudiesPage() {
             url: "http://www.tecnavia.com/eedition/",
             tags: ["Publishing platform", "Paywall & subscriptions", "Web, iOS & Android"]
         },
+
         {
-            id: 5,
+            id: 7,
             client: "Vito Di Bari",
             sector: "Personal Brand",
             description:
@@ -51,10 +74,9 @@ export default function CaseStudiesPage() {
             url: "http://www.vitodibari.com",
             tags: ["Portfolio site", "Speaker booking", "Editorial content"]
         },
+
         {
-            // TODO: domain does not currently resolve. Confirm the live URL and the
-            // copy below with the client before this card ships.
-            id: 6,
+            id: 8,
             client: "Lumetti Ceramiche",
             sector: "Ceramics & Interiors",
             description:
@@ -62,8 +84,9 @@ export default function CaseStudiesPage() {
             url: "http://www.lumetticeramiche.com",
             tags: ["Product catalogue", "Collections", "Corporate site"]
         },
+
         {
-            id: 7,
+            id: 9,
             client: "Profilegno",
             sector: "Wood Flooring",
             description:
@@ -71,8 +94,9 @@ export default function CaseStudiesPage() {
             url: "https://www.profilegno.net/it/",
             tags: ["Product catalogue", "Technical specs", "Multi-language"]
         },
+
         {
-            id: 8,
+            id: 10,
             client: "Monpar",
             sector: "Wood Flooring",
             description:
@@ -81,6 +105,8 @@ export default function CaseStudiesPage() {
             tags: ["Product catalogue", "Collections & finishes", "Corporate site"]
         }
     ];
+
+
 
     return (
         <>
